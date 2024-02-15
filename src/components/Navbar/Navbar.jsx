@@ -6,12 +6,16 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 import { HiMiniMicrophone } from "react-icons/hi2";
 import { HiOutlineVideoCamera } from "react-icons/hi2";
 
-const Navbar = () => {
+const Navbar = ({ setSidebar, sidebar }) => {
     return (
-        <div className="max-w-[1550px] mx-auto">
+        <div className="w-full mx-auto fixed top-0 left-0 bg-white">
             <div className="flex justify-between py-2 lg:gap-5 md:gap-5 sm:gap-3 gap-3 px-5">
                 <div className="flex items-center gap-5">
-                    <RxHamburgerMenu size={22} className="cursor-pointer" />
+                    <RxHamburgerMenu
+                        size={22}
+                        className="cursor-pointer"
+                        onClick={() => setSidebar(!sidebar)}
+                    />
                     <div className="flex items-center gap-1 cursor-pointer">
                         <FaYoutube color="#FF0000" size={35} />
                         <p className="font-bold text-[22px] title">Youtube</p>
