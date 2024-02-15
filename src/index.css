@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.title {
+    font-family: "Oswald", sans-serif;
+}
