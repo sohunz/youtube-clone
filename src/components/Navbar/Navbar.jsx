@@ -8,7 +8,7 @@ import { HiOutlineVideoCamera } from "react-icons/hi2";
 
 const Navbar = ({ setSidebar, sidebar }) => {
     return (
-        <div className="w-full mx-auto fixed top-0 left-0 bg-white">
+        <div className="w-full mx-auto fixed top-0 left-0 bg-white z-10">
             <div className="flex justify-between py-2 lg:gap-5 md:gap-5 sm:gap-3 gap-3 px-5">
                 <div className="flex items-center gap-5">
                     <RxHamburgerMenu

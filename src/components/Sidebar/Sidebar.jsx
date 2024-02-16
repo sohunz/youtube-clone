@@ -5,6 +5,7 @@ import { MdSubscriptions } from "react-icons/md";
 import { HiOutlineChevronRight } from "react-icons/hi2";
 import { PiUserSquareFill } from "react-icons/pi";
 import { RiHistoryLine } from "react-icons/ri";
+import { BiSolidVideos } from "react-icons/bi";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { IoCutSharp } from "react-icons/io5";
@@ -38,32 +39,76 @@ const Sidebar = ({ sidebar }) => {
         <div
             className={
                 sidebar
-                    ? " w-[270px] h-screen flex flex-col gap-3 border mt-16 overflow-y-auto fixed top-0 custom-scrollbar"
-                    : " hidden"
+                    ? " w-[270px] h-screen flex flex-col gap-3 border mt-16 overflow-y-auto fixed top-0 custom-scrollbar bg-white z-20"
+                    : "w-auto h-screen flex flex-col gap-3 border mt-16 overflow-y-auto fixed top-0 custom-scrollbar bg-white z-20 rounded-lg"
             }
         >
-            <div className=" w-full px-3 pb-3 border-b-[1px]">
-                <ul className="flex flex-col">
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
+            <div
+                className={
+                    sidebar
+                        ? " w-full px-3 pb-3 border-b-[1px]"
+                        : " w-full px-[1px] pb-3 border-0"
+                }
+            >
+                <ul
+                    className={
+                        sidebar ? "flex flex-col" : "flex flex-col gap-3"
+                    }
+                >
+                    <li
+                        className={
+                            sidebar
+                                ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
+                                : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
+                        }
+                    >
                         <GoHomeFill size={23} />
-                        <p>Home</p>
+                        <p className={sidebar ? "" : "text-[11px]"}>Home</p>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
+                    <li
+                        className={
+                            sidebar
+                                ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
+                                : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
+                        }
+                    >
                         <MdOutlineVideoLibrary size={23} />
-                        <p>Shorts</p>
+                        <p className={sidebar ? "" : "text-[11px]"}>Shorts</p>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
+                    <li
+                        className={
+                            sidebar
+                                ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
+                                : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
+                        }
+                    >
                         <MdOutlineSubscriptions size={23} />
-                        <p>Subscripts</p>
+                        <p className={sidebar ? "" : "text-[11px]"}>
+                            Subscripts
+                        </p>
+                    </li>
+                    <li
+                        className={
+                            sidebar
+                                ? "hidden"
+                                : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
+                        }
+                    >
+                        <AiOutlinePlaySquare size={23} />
+                        <p className={sidebar ? "" : "text-[11px]"}>You</p>
                     </li>
                 </ul>
             </div>
 
-            <div className="w-full px-3 pb-3 border-b-[1px]">
+            <div
+                className={
+                    sidebar ? "w-full px-3 pb-3 border-b-[1px]" : "hidden"
+                }
+            >
                 <ul className="flex flex-col">
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <p className="font-bold">You</p>
-                        <HiOutlineChevronRight />
+                        <HiOutlineChevronRight size={23} />
                     </li>
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <PiUserSquareLight size={23} />
@@ -92,7 +137,11 @@ const Sidebar = ({ sidebar }) => {
                 </ul>
             </div>
 
-            <div className="w-full px-3 pb-3 border-b-[1px]">
+            <div
+                className={
+                    sidebar ? "w-full px-3 pb-3 border-b-[1px]" : "hidden"
+                }
+            >
                 <p className="font-bold pl-3 pb-3">Subscriptions</p>
                 <ul className="flex flex-col">
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
@@ -153,7 +202,11 @@ const Sidebar = ({ sidebar }) => {
                 </ul>
             </div>
 
-            <div className="w-full px-3 pb-3 border-b-[1px]">
+            <div
+                className={
+                    sidebar ? "w-full px-3 pb-3 border-b-[1px]" : "hidden"
+                }
+            >
                 <ul className="flex flex-col">
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <p className="font-bold">Explore</p>
@@ -178,7 +231,11 @@ const Sidebar = ({ sidebar }) => {
                 </ul>
             </div>
 
-            <div className="w-full px-3 border-b-[1px] pb-3">
+            <div
+                className={
+                    sidebar ? "w-full px-3 border-b-[1px] pb-3" : "hidden"
+                }
+            >
                 <ul className="flex flex-col">
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <p className="font-bold">More From Youtube</p>
@@ -202,7 +259,11 @@ const Sidebar = ({ sidebar }) => {
                     </li>
                 </ul>
             </div>
-            <div className="w-full px-3 border-b-[1px] pb-3 ">
+            <div
+                className={
+                    sidebar ? "w-full px-3 border-b-[1px] pb-3 " : "hidden"
+                }
+            >
                 <ul className="flex flex-col">
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <IoMdSettings size={23} />
@@ -222,7 +283,11 @@ const Sidebar = ({ sidebar }) => {
                     </li>
                 </ul>
             </div>
-            <div className=" w-full px-3 border-b-[1px] pb-20">
+            <div
+                className={
+                    sidebar ? " w-full px-3 border-b-[1px] pb-20" : "hidden"
+                }
+            >
                 <ul className="flex flex-col">
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <p className="font-bold">Category</p>

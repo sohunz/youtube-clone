@@ -5,7 +5,7 @@ import Homepage from "./pages/Home/Homepage";
 import Video from "./pages/Video/Video";
 
 const App = () => {
-    const [sidebar, setSidebar] = useState(true);
+    const [sidebar, setSidebar] = useState(false);
     return (
         <div>
             <Navbar setSidebar={setSidebar} sidebar={sidebar} />
