@@ -5,12 +5,16 @@ import { PiDotsThreeVerticalBold } from "react-icons/pi";
 
 const FeedCard = () => {
     return (
-        <div className="relative group">
-            <div className="w-auto h-[164px] overflow-hidden border rounded-xl">
+        <div className="relative group cursor-pointer">
+            <div className="w-auto h-auto overflow-hidden border rounded-xl relative">
                 <img
                     src="https://static.sproutgigs.com/gigs/2022/10/28/0099ee2e/b3d86567.jpg"
                     alt=""
+                    className="h-auto"
                 />
+                <p className="bg-black text-white px-2 rounded-md text-[13px] absolute bottom-1 right-[5px]">
+                    3:05
+                </p>
             </div>
             <div className="w-full flex gap-3 rounded-lg pt-2">
                 <div className="w-full flex gap-3 rounded-lg">
@@ -22,7 +26,7 @@ const FeedCard = () => {
                         />
                     </div>
                     <div>
-                        <p class="line-clamp-2 pb-1 text-[15px] pr-1 font-bold">
+                        <p className="line-clamp-2 pb-1 text-[15px] pr-1 font-bold">
                             WEB DEVELOPMENT How To Become a Pro Web Development
                             in 2024
                         </p>
@@ -47,9 +51,6 @@ const FeedCard = () => {
                     </div>
                 </div>
             </div>
-            <p className="bg-black text-white px-2 rounded-md text-[13px] absolute right-[5px] top-[140px]">
-                3:05
-            </p>
         </div>
     );
 };
