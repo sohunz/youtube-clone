@@ -80,8 +80,9 @@ const Channel = () => {
                                         </span>
                                         and {item.linkCount} more link
                                     </p>
-                                    <div className="flex items-center gap-3 bg-gray-100 rounded-full py-2 px-3 border-0 cursor-pointer w-[150px] justify-center">
-                                        <p className="font-bold">Subscribed</p>
+                                    <div className="flex items-center gap-3 bg-gray-100 rounded-full py-2 px-4 border-0 cursor-pointer w-[170px]">
+                                        <MdNotificationsActive size={25} />
+                                        <p>Subscribed</p>
                                         <BsChevronDown />
                                     </div>
                                 </div>
