@@ -1,11 +1,6 @@
 import React from "react";
 import { GoHomeFill } from "react-icons/go";
-import { SiYoutubeshorts } from "react-icons/si";
-import { MdSubscriptions } from "react-icons/md";
 import { HiOutlineChevronRight } from "react-icons/hi2";
-import { PiUserSquareFill } from "react-icons/pi";
-import { RiHistoryLine } from "react-icons/ri";
-import { BiSolidVideos } from "react-icons/bi";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { IoCutSharp } from "react-icons/io5";
@@ -33,8 +28,11 @@ import { LuMusic } from "react-icons/lu";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { BiBookContent } from "react-icons/bi";
 import { CiTrophy } from "react-icons/ci";
+import data from "../../../data/data";
 
 const Sidebar = ({ sidebar }) => {
+    const dataFiltered = data.slice(0, 7);
+
     return (
         <div
             className={
@@ -144,56 +142,21 @@ const Sidebar = ({ sidebar }) => {
             >
                 <p className="font-bold pl-3 pb-3">Subscriptions</p>
                 <ul className="flex flex-col">
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
-                            <img
-                                src="https://yt3.googleusercontent.com/ZJay_PuGajAmgtcOUGKdaJYGqI1RWAXoGiWZadFUcGn9E1Ubm-uMQ5NUGjWm1ThoG-zE8GHkxw=s900-c-k-c0x00ffffff-no-rj"
-                                alt=""
-                                className="w-[100%] h-[100%]"
-                            />
-                        </div>
-                        <p>Web Development</p>
-                    </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
-                            <img
-                                src="https://yt3.googleusercontent.com/ZJay_PuGajAmgtcOUGKdaJYGqI1RWAXoGiWZadFUcGn9E1Ubm-uMQ5NUGjWm1ThoG-zE8GHkxw=s900-c-k-c0x00ffffff-no-rj"
-                                alt=""
-                                className="w-[100%] h-[100%]"
-                            />
-                        </div>
-                        <p>Web Development</p>
-                    </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
-                            <img
-                                src="https://yt3.googleusercontent.com/ZJay_PuGajAmgtcOUGKdaJYGqI1RWAXoGiWZadFUcGn9E1Ubm-uMQ5NUGjWm1ThoG-zE8GHkxw=s900-c-k-c0x00ffffff-no-rj"
-                                alt=""
-                                className="w-[100%] h-[100%]"
-                            />
-                        </div>
-                        <p>Web Development</p>
-                    </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
-                            <img
-                                src="https://yt3.googleusercontent.com/ZJay_PuGajAmgtcOUGKdaJYGqI1RWAXoGiWZadFUcGn9E1Ubm-uMQ5NUGjWm1ThoG-zE8GHkxw=s900-c-k-c0x00ffffff-no-rj"
-                                alt=""
-                                className="w-[100%] h-[100%]"
-                            />
-                        </div>
-                        <p>Web Development</p>
-                    </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
-                            <img
-                                src="https://yt3.googleusercontent.com/ZJay_PuGajAmgtcOUGKdaJYGqI1RWAXoGiWZadFUcGn9E1Ubm-uMQ5NUGjWm1ThoG-zE8GHkxw=s900-c-k-c0x00ffffff-no-rj"
-                                alt=""
-                                className="w-[100%] h-[100%]"
-                            />
-                        </div>
-                        <p>Web Development</p>
-                    </li>
+                    {dataFiltered.map((item) => {
+                        return (
+                            <>
+                                <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
+                                    <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
+                                        <img
+                                            src={item.profile}
+                                            className="w-[100%] h-[100%]"
+                                        />
+                                    </div>
+                                    <p>{item.author}</p>
+                                </li>
+                            </>
+                        );
+                    })}
 
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <MdExpandMore size={23} />
