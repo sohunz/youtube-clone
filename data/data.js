@@ -1,5 +1,6 @@
 const data = [
     {
+        id: 1,
         title: "The new MacBook Pro | Apple",
         views: "39M",
         profile:
@@ -7,8 +8,20 @@ const data = [
         upload: "3 months ago",
         author: "Apple",
         thumbnail: "https://i.ytimg.com/vi/0pg_Y41waaE/maxresdefault.jpg",
+        channelProfile:
+            "https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s176-c-k-c0x00ffffff-no-rj",
+        subscribers: "18.8M",
+        videos: 185,
+        description:
+            "Welcome to the official Apple YouTube channel. Here you’ll find news about product launches, tutorials, and other great content. Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today Apple continues to be a global leader in innovation with products like iPhone, iPad, Mac, Apple Watch and Apple Vision Pro. Our six software platforms (iOS, iPadOS, macOS, watchOS, tvOS, and visionOS) provide seamless experiences across Apple devices. Breakthrough services include the App Store, Apple Music, Apple Pay, and iCloud. And Apple keeps pursuing innovation with products like HomePod, Apple Fitness+, and Apple Card. Apple’s more than 160,000 employees are dedicated to making the best products on earth, and to leaving the world better than we found it. ",
+        banner: "https://i.pinimg.com/originals/bf/06/de/bf06de97ffdc562365432fd4958f903d.jpg",
+        link: "apple.com",
+        linkCount: 1,
+        username: "Apple",
+        verified: true,
     },
     {
+        id: 2,
         title: "Samsung Galaxy S24 Ultra vs iPhone 15 Pro Max - Which Should You Buy?",
         views: "282K",
         profile:
@@ -19,6 +32,7 @@ const data = [
             "https://i.ytimg.com/vi/ChQl1u6YU7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBcUlXm0C9hCAS0sjFDpOmAtUtxrA",
     },
     {
+        id: 3,
         title: "Samsung S24 Ultra vs iPhone 15 Pro Max Camera Battle!",
         views: "5.1M",
         profile:
@@ -29,6 +43,7 @@ const data = [
     },
 
     {
+        id: 4,
         title: "React Native vs Flutter - I built the same chat app with both",
         views: "1.8M",
         profile:
@@ -38,6 +53,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/X8ipUgXH6jw/maxresdefault.jpg",
     },
     {
+        id: 5,
         title: "AI Generated Videos Just Changed Forever",
         views: "3.3M",
         profile:
@@ -47,6 +63,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/NXpdyAWLDas/maxresdefault.jpg",
     },
     {
+        id: 6,
         title: "Actually, ChatGPT is INCREDIBLY Useful (15 Surprising Examples)",
         views: "98K",
         profile:
@@ -57,6 +74,7 @@ const data = [
     },
 
     {
+        id: 7,
         title: "Ford Mustang SHELBY GT500 Review: The MADDEST Muscle Car! | 4K",
         views: "1.4M",
         profile:
@@ -67,6 +85,7 @@ const data = [
     },
 
     {
+        id: 8,
         title: "Samsung Galaxy S24 Ultra TIPS, TRICKS & HIDDEN FEATURES!!",
         views: "251K",
         profile:
@@ -76,6 +95,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/emrLEDH52e0/maxresdefault.jpg",
     },
     {
+        id: 9,
         title: "The GOOD And The BAD of Living with Old JDM Cars",
         views: "87K",
         profile:
@@ -85,6 +105,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/ApYl1EF5dNs/maxresdefault.jpg",
     },
     {
+        id: 10,
         title: "SOLO Car Tent Camping in the RAIN [ Relaxing, cosy rain shelter, ASMR ]",
         views: "25K",
         profile:
@@ -95,6 +116,7 @@ const data = [
             "https://i.ytimg.com/vi/-wm71pIfT-s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB8wRVsVgyynoUvyoEmNqRIVIsaCw",
     },
     {
+        id: 11,
         title: "Create YouTube Clone Using React JS | Build Complete Website Like YouTube In React JS 2024",
         views: "12K",
         profile:
@@ -104,6 +126,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/Zb1zVeXLUf8/maxresdefault.jpg",
     },
     {
+        id: 12,
         title: "Samsung Galaxy S24 Unboxing - ASMR",
         views: "350K",
         profile:
@@ -114,6 +137,7 @@ const data = [
     },
 
     {
+        id: 13,
         title: "Trance",
         views: "16M",
         profile:
@@ -123,6 +147,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/gHb6AEwNFBU/maxresdefault.jpg",
     },
     {
+        id: 14,
         title: "Freshhkiicks Nismo R35 GTR [4K]",
         views: "2.6M",
         profile:
@@ -132,6 +157,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/Jvr0U2ZInoE/maxresdefault.jpg",
     },
     {
+        id: 15,
         title: "Hello Apple Vision Pro",
         views: "34M",
         profile:
@@ -141,6 +167,7 @@ const data = [
         thumbnail: "https://i.ytimg.com/vi/IY4x85zqoJM/maxresdefault.jpg",
     },
     {
+        id: 16,
         title: "Introducing Windows 11",
         views: "11M",
         profile:

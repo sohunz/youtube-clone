@@ -144,7 +144,7 @@ const Sidebar = ({ sidebar }) => {
                 <ul className="flex flex-col">
                     {dataFiltered.map((item) => {
                         return (
-                            <>
+                            <div key={item.id}>
                                 <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                                     <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
                                         <img
@@ -154,7 +154,7 @@ const Sidebar = ({ sidebar }) => {
                                     </div>
                                     <p>{item.author}</p>
                                 </li>
-                            </>
+                            </div>
                         );
                     })}
 

@@ -5,6 +5,7 @@ import { GoSearch } from "react-icons/go";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { HiMiniMicrophone } from "react-icons/hi2";
 import { HiOutlineVideoCamera } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ setSidebar, sidebar }) => {
     return (
@@ -16,10 +17,13 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         className="cursor-pointer"
                         onClick={() => setSidebar(!sidebar)}
                     />
-                    <div className="flex items-center gap-1 cursor-pointer">
+                    <Link
+                        to="/"
+                        className="flex items-center gap-1 cursor-pointer"
+                    >
                         <FaYoutube color="#FF0000" size={35} />
                         <p className="font-bold text-[22px] title">Youtube</p>
-                    </div>
+                    </Link>
                 </div>
                 <div className=" w-[45%] lg:flex md:flex sm:flex hidden items-center gap-4">
                     <div className="w-full flex items-center border-[1px] rounded-full">

@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdAccessTime } from "react-icons/md";
 import { RiPlayList2Fill } from "react-icons/ri";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { PiDot } from "react-icons/pi";
-import data from "../../../data/data.js";
+import { Link } from "react-router-dom";
+import DataContext from "../../context/DataContext";
 
 const FeedCard = () => {
+    const data = useContext(DataContext);
     return (
         <>
             {data.map((item) => {
                 return (
-                    <div className="relative group cursor-pointer">
+                    <Link
+                        to={`/channel/${item.id}`}
+                        className="relative group cursor-pointer"
+                        key={item.id}
+                    >
                         <div className="w-auto h-auto overflow-hidden border rounded-xl relative">
                             <img
                                 src={item.thumbnail}
@@ -63,7 +69,7 @@ const FeedCard = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 );
             })}
         </>
