@@ -37,7 +37,7 @@ const Sidebar = ({ sidebar }) => {
         <div
             className={
                 sidebar
-                    ? " w-[270px] h-screen flex flex-col gap-3 border mt-[65px] overflow-y-auto fixed top-0 custom-scrollbar bg-white z-50"
+                    ? " w-[270px] h-screen flex flex-col gap-3 border-r-[1px] mt-[65px] overflow-y-auto fixed top-0 custom-scrollbar bg-white z-50"
                     : "w-auto h-screen flex flex-col gap-3 mt-[55px] overflow-y-auto fixed top-0 custom-scrollbar bg-white z-20"
             }
         >

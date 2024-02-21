@@ -6,6 +6,7 @@ import Category from "./components/Category/Category";
 import Channel from "./components/Channel/Channel";
 import DataContext from "./context/DataContext";
 import data from "../data/data";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 const App = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -13,7 +14,8 @@ const App = () => {
         <div>
             <DataContext.Provider value={data}>
                 <Navbar setSidebar={setSidebar} sidebar={sidebar} />
-                <Category />
+                <Sidebar sidebar={sidebar} />
+                {/* <Category /> */}
                 <Routes>
                     <Route path="/" element={<Homepage sidebar={sidebar} />} />
                     <Route path="/channel/:username" element={<Channel />} />

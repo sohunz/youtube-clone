@@ -27,9 +27,9 @@ const FeedCard = () => {
                                 3:05
                             </p>
                         </div>
-                        <div className="w-full flex gap-3 rounded-lg pt-2">
+                        <div className="w-full flex gap-3 rounded-lg pt-2 relative">
                             <div className="w-full flex gap-3 rounded-lg">
-                                <div className="bg-gray-500 min-w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
+                                <div className="bg-gray-500 min-w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden ">
                                     <img
                                         src={item.profile}
                                         className="w-[100%] h-[100%]"
@@ -37,7 +37,7 @@ const FeedCard = () => {
                                 </div>
                                 <div>
                                     <p
-                                        className="line-clamp-2 pb-1 text-[15px] pr-1 "
+                                        className="line-clamp-2 pb-1 text-[15px] pr-5 "
                                         style={{ fontWeight: "500" }}
                                     >
                                         {item.title}
@@ -51,13 +51,15 @@ const FeedCard = () => {
                                         {item.upload}
                                     </p>
                                 </div>
+                                <div className="absolute top-2 right-[-5px] hidden group-hover:block">
+                                    <p>
+                                        <PiDotsThreeVerticalBold
+                                            size={23}
+                                            className="cursor-pointer"
+                                        />
+                                    </p>
+                                </div>
                             </div>
-                            <p>
-                                <PiDotsThreeVerticalBold
-                                    size={23}
-                                    className="cursor-pointer"
-                                />
-                            </p>
                         </div>
                         <div className="hidden flex-col gap-1 absolute top-0 right-0 show group-hover:flex">
                             <div className="flex flex-col gap-1 p-2">

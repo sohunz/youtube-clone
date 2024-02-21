@@ -24,7 +24,7 @@ const Channel = () => {
 
     return (
         <div className=" w-full mt-[65px]">
-            <div className="max-w-[1350px] mx-auto px-10">
+            <div className="max-w-[1350px] mx-auto px-16 pl-28">
                 {dataFiltered.map((item) => {
                     return (
                         <div className="w-full lg:h-[200px] md:h-[150px] sm:h-[140px] h-[100px]">
@@ -41,10 +41,10 @@ const Channel = () => {
                                         className="min-w-[160px] max-h-[160px] "
                                     />
                                 </div>
-                                <div className="inline-flex flex-col gap-3">
+                                <div className="inline-flex flex-col gap-2">
                                     <div className="w-full">
                                         <div className="flex items-center gap-2">
-                                            <p className="font-bold text-4xl">
+                                            <p className="font-bold text-4xl lg:pt-0 md:pt-0 sm:pt-2 pt-2">
                                                 {item.author}
                                             </p>
                                             {item.verified ? (
@@ -53,7 +53,7 @@ const Channel = () => {
                                                 ""
                                             )}
                                         </div>
-                                        <div className="flex flex-wrap items-center text-gray-700 pt-2 ">
+                                        <div className="flex flex-wrap items-center text-gray-600 pt-2 ">
                                             <p>@{item.username}</p>
                                             <PiDot size={25} className=" w-5" />
                                             <p>
@@ -63,8 +63,8 @@ const Channel = () => {
                                             <p>{item.videos} videos</p>
                                         </div>
                                     </div>
-                                    <div className="lg:w-[60%] md:w-[70%] sm:w-100 w-100 flex items-center cursor-pointer">
-                                        <p className="line-clamp-1 text-gray-700">
+                                    <div className="lg:w-[60%] md:w-[100%] sm:w-100 w-100 flex items-center cursor-pointer">
+                                        <p className="line-clamp-1 text-gray-600">
                                             {item.description}
                                         </p>
                                         <div>

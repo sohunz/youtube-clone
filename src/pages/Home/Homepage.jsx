@@ -5,7 +5,7 @@ import Feed from "../Feed/Feed";
 const Homepage = ({ sidebar }) => {
     return (
         <div>
-            <Sidebar sidebar={sidebar} />
+            {/* <Sidebar sidebar={sidebar} /> */}
             <Feed />
         </div>
     );
