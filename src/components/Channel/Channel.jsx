@@ -12,9 +12,9 @@ import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { VscVerifiedFilled } from "react-icons/vsc";
 
 const Channel = () => {
-    const { id } = useParams();
+    const { username } = useParams();
     const data = useContext(DataContext);
-    const dataFiltered = data.filter((item) => item.id == id);
+    const dataFiltered = data.filter((item) => item.username == username);
 
     const [activeTab, setActiveTab] = useState("Home");
 
@@ -23,27 +23,27 @@ const Channel = () => {
     };
 
     return (
-        <div className=" w-full mt-[60px]">
-            <div className="max-w-[1400px] mx-auto">
+        <div className=" w-full mt-[65px]">
+            <div className="max-w-[1350px] mx-auto px-10">
                 {dataFiltered.map((item) => {
                     return (
-                        <div className="w-full h-[230px]">
+                        <div className="w-full lg:h-[200px] md:h-[150px] sm:h-[140px] h-[100px]">
                             <img
                                 src={item.banner}
                                 alt="Your Channel Logo"
                                 className="w-full h-full object-cover rounded-xl"
                             />
-                            <div className="pt-7 flex gap-7">
-                                <div className="w-[700px] h-full rounded-full overflow-hidden">
+                            <div className="lg:pt-7 md:pt-6 sm:pt-5 pt-3 flex gap-7">
+                                <div className="min-w-[160px] max-h-[160px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
                                     <img
                                         src={item.channelProfile}
                                         alt=""
-                                        className=" w-full h-full object-cover"
+                                        className="min-w-[160px] max-h-[160px] "
                                     />
                                 </div>
                                 <div className="inline-flex flex-col gap-3">
-                                    <div>
-                                        <div className="flex items-center gap-3">
+                                    <div className="w-full">
+                                        <div className="flex items-center gap-2">
                                             <p className="font-bold text-4xl">
                                                 {item.author}
                                             </p>
@@ -53,7 +53,7 @@ const Channel = () => {
                                                 ""
                                             )}
                                         </div>
-                                        <div className="flex items-center text-gray-700">
+                                        <div className="flex flex-wrap items-center text-gray-700 pt-2 ">
                                             <p>@{item.username}</p>
                                             <PiDot size={25} className=" w-5" />
                                             <p>
@@ -63,7 +63,7 @@ const Channel = () => {
                                             <p>{item.videos} videos</p>
                                         </div>
                                     </div>
-                                    <div className="w-[50%] flex items-center cursor-pointer">
+                                    <div className="lg:w-[60%] md:w-[70%] sm:w-100 w-100 flex items-center cursor-pointer">
                                         <p className="line-clamp-1 text-gray-700">
                                             {item.description}
                                         </p>
@@ -74,11 +74,11 @@ const Channel = () => {
                                             />
                                         </div>
                                     </div>
-                                    <p>
+                                    <p className="text-black">
                                         <span className="text-blue-700">
                                             {item.link}
                                         </span>
-                                        and {item.linkCount} more link
+                                        &nbsp; and {item.linkCount} more link
                                     </p>
                                     <div className="flex items-center gap-3 bg-gray-100 rounded-full py-2 px-4 border-0 cursor-pointer w-[170px]">
                                         <MdNotificationsActive size={25} />
@@ -87,12 +87,12 @@ const Channel = () => {
                                     </div>
                                 </div>
                             </div>
-                            <ul className="flex gap-10 mt-5 text-xl">
+                            <ul className="flex gap-10 mt-7 text-xl line-clamp-1">
                                 <li
                                     className={`cursor-pointer ${
                                         activeTab === "Home"
-                                            ? "border-b-2 border-black pb-3"
-                                            : ""
+                                            ? "border-b-[3px] border-black pb-2"
+                                            : "text-gray-700"
                                     }`}
                                     onClick={() => handleTabClick("Home")}
                                 >
@@ -101,8 +101,8 @@ const Channel = () => {
                                 <li
                                     className={`cursor-pointer ${
                                         activeTab === "Videos"
-                                            ? "border-b-2 border-black pb-3"
-                                            : ""
+                                            ? "border-b-[3px] border-black pb-2"
+                                            : "text-gray-700"
                                     }`}
                                     onClick={() => handleTabClick("Videos")}
                                 >
@@ -111,8 +111,8 @@ const Channel = () => {
                                 <li
                                     className={`cursor-pointer ${
                                         activeTab === "Shorts"
-                                            ? "border-b-2 border-black pb-3"
-                                            : ""
+                                            ? "border-b-[3px] border-black pb-2"
+                                            : "text-gray-700"
                                     }`}
                                     onClick={() => handleTabClick("Shorts")}
                                 >
@@ -121,8 +121,8 @@ const Channel = () => {
                                 <li
                                     className={`cursor-pointer ${
                                         activeTab === "Live"
-                                            ? "border-b-2 border-black pb-3"
-                                            : ""
+                                            ? "border-b-[3px] border-black pb-2"
+                                            : "text-gray-700"
                                     }`}
                                     onClick={() => handleTabClick("Live")}
                                 >
@@ -131,8 +131,8 @@ const Channel = () => {
                                 <li
                                     className={`cursor-pointer ${
                                         activeTab === "Playlists"
-                                            ? "border-b-2 border-black pb-3"
-                                            : ""
+                                            ? "border-b-[3px] border-black pb-2"
+                                            : "text-gray-700"
                                     }`}
                                     onClick={() => handleTabClick("Playlists")}
                                 >
@@ -141,14 +141,14 @@ const Channel = () => {
                                 <li
                                     className={`cursor-pointer ${
                                         activeTab === "Community"
-                                            ? "border-b-2 border-black pb-3"
-                                            : ""
+                                            ? "border-b-[3px] border-black pb-2"
+                                            : "text-gray-700"
                                     }`}
                                     onClick={() => handleTabClick("Community")}
                                 >
                                     Community
                                 </li>
-                                <li>
+                                <li className="cursor-pointer">
                                     <GoSearch color="gray" size={22} />
                                 </li>
                             </ul>
@@ -156,14 +156,14 @@ const Channel = () => {
                             {dataFiltered.map((item) => {
                                 return (
                                     <div
-                                        className="relative group cursor-pointer mt-5 flex gap-5 pb-10"
+                                        className="w-full  relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5"
                                         key={item.id}
                                     >
-                                        <div className="w-[300px] h-auto overflow-hidden rounded-xl relative">
+                                        <div className="max-w-[300px] h-auto overflow-hidden rounded-xl relative">
                                             <img
                                                 src={item.thumbnail}
                                                 alt=""
-                                                className="h-auto"
+                                                className="h-full"
                                             />
                                             <div className="hidden flex-col gap-1 absolute top-0 right-1 show group-hover:flex">
                                                 <div className="flex flex-col gap-1 p-2">
@@ -179,15 +179,15 @@ const Channel = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p className="bg-black text-white px-2 rounded-md text-[13px] absolute bottom-1 right-[5px]">
+                                            <p className="bg-black text-white px-2 rounded-md text-[13px] absolute bottom-2 right-2">
                                                 3:05
                                             </p>
                                         </div>
-                                        <div className="w-full flex gap-3 rounded-lg pt-2">
+                                        <div className="w-full flex gap-3 rounded-lg pt-2 ">
                                             <div className="w-full flex gap-3 rounded-lg">
-                                                <div className="flex flex-col gap-3 w-[50%]">
+                                                <div className="flex flex-col gap-3 lg:w-[50%] md:w-[70%] sm:w-100 w-100">
                                                     <p
-                                                        className="line-clamp-2 pb-1 text-[15px] pr-1 "
+                                                        className="lg:line-clamp-2 md:line-clamp-2 sm:line-clamp-2 line-clamp-2 pb-1 text-xl pr-1 "
                                                         style={{
                                                             fontWeight: "500",
                                                         }}
@@ -196,7 +196,7 @@ const Channel = () => {
                                                     </p>
                                                     <div className="flex items-center gap-3">
                                                         <div className="flex items-center gap-1">
-                                                            <p className="text-gray-600">
+                                                            <p className="text-gray-600 text-sm">
                                                                 {item.author}
                                                             </p>
                                                             {item.verified ? (
@@ -205,7 +205,7 @@ const Channel = () => {
                                                                 ""
                                                             )}
                                                         </div>
-                                                        <p className="text-gray-600 flex flex-row items-center text-[13px]">
+                                                        <p className="text-gray-600 lg:flex md:flex sm:line-clamp-1 line-clamp-1 flex-row items-center text-sm ">
                                                             {item.views} views
                                                             <PiDot
                                                                 size={25}
@@ -214,7 +214,7 @@ const Channel = () => {
                                                             {item.upload}
                                                         </p>
                                                     </div>
-                                                    <p className="line-clamp-2">
+                                                    <p className="lg:line-clamp-2 md:line-clamp-2 sm:line-clamp-2 line-clamp-2 text-sm">
                                                         {item.description}
                                                     </p>
                                                 </div>

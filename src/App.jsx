@@ -16,7 +16,7 @@ const App = () => {
                 <Category />
                 <Routes>
                     <Route path="/" element={<Homepage sidebar={sidebar} />} />
-                    <Route path="/channel/:id" element={<Channel />} />
+                    <Route path="/channel/:username" element={<Channel />} />
                 </Routes>
             </DataContext.Provider>
         </div>
