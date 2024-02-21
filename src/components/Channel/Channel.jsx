@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import DataContext from "../../context/DataContext";
-import { MdNotificationsActive } from "react-icons/md";
 import { PiDot } from "react-icons/pi";
 import { HiOutlineChevronRight } from "react-icons/hi2";
 import { BsChevronDown } from "react-icons/bs";
@@ -10,6 +9,7 @@ import { MdAccessTime } from "react-icons/md";
 import { RiPlayList2Fill } from "react-icons/ri";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { VscVerifiedFilled } from "react-icons/vsc";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 const Channel = () => {
     const { username } = useParams();
@@ -17,6 +17,7 @@ const Channel = () => {
     const dataFiltered = data.filter((item) => item.username == username);
 
     const [activeTab, setActiveTab] = useState("Home");
+    const [subscribe, setSubscribe] = useState(false);
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -74,16 +75,33 @@ const Channel = () => {
                                             />
                                         </div>
                                     </div>
-                                    <p className="text-black">
+                                    <p className="text-black pb-2">
                                         <span className="text-blue-700">
                                             {item.link}
                                         </span>
                                         &nbsp; and {item.linkCount} more link
                                     </p>
-                                    <div className="flex items-center gap-3 bg-gray-100 rounded-full py-2 px-4 border-0 cursor-pointer w-[170px]">
-                                        <MdNotificationsActive size={25} />
-                                        <p>Subscribed</p>
-                                        <BsChevronDown />
+                                    <div
+                                        className={
+                                            subscribe
+                                                ? "flex items-center gap-2 bg-gray-200 rounded-full py-2 px-4 border-0 cursor-pointer w-[160px] h-[40px]"
+                                                : "flex items-center gap-3 bg-black text-white rounded-full px-4 border-0 cursor-pointer w-[120px] justify-center py-[9px] h-[40px] "
+                                        }
+                                        onClick={() => setSubscribe(!subscribe)}
+                                    >
+                                        {subscribe ? (
+                                            <IoMdNotificationsOutline
+                                                size={25}
+                                            />
+                                        ) : (
+                                            ""
+                                        )}
+                                        {subscribe ? (
+                                            <p>Subscribed</p>
+                                        ) : (
+                                            <p>Subscribe</p>
+                                        )}
+                                        {subscribe ? <BsChevronDown /> : ""}
                                     </div>
                                 </div>
                             </div>
