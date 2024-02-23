@@ -19,7 +19,7 @@ const data = [
         linkCount: 1,
         username: "Apple",
         verified: true,
-        src: "https://www.youtube.com/embed/0pg_Y41waaE",
+        src: "https://www.youtube.com/embed/0pg_Y41waaE?autoplay=1",
     },
     {
         id: 2,
@@ -42,7 +42,7 @@ const data = [
         linkCount: "2",
         username: "Thetechchap",
         verified: true,
-        src: "https://www.youtube.com/embed/ChQl1u6YU7Q",
+        src: "https://www.youtube.com/embed/ChQl1u6YU7Q?autoplay=1",
     },
     {
         id: 3,
@@ -64,7 +64,7 @@ const data = [
         linkCount: "1",
         username: "Mrwhosetheboss",
         verified: true,
-        src: "https://www.youtube.com/embed/btmeie5A4yE",
+        src: "https://www.youtube.com/embed/btmeie5A4yE?autoplay=1",
     },
 
     {
@@ -87,7 +87,7 @@ const data = [
         linkCount: "5",
         username: "Fireship",
         verified: true,
-        src: "https://www.youtube.com/embed/X8ipUgXH6jw",
+        src: "https://www.youtube.com/embed/X8ipUgXH6jw?autoplay=1",
     },
     {
         id: 5,
@@ -109,7 +109,7 @@ const data = [
         linkCount: "4",
         username: "mkbhd",
         verified: true,
-        src: "https://www.youtube.com/embed/NXpdyAWLDas",
+        src: "https://www.youtube.com/embed/NXpdyAWLDas?autoplay=1",
     },
     {
         id: 6,
@@ -131,7 +131,7 @@ const data = [
         linkCount: "5",
         username: "ThioJoe",
         verified: true,
-        src: "https://www.youtube.com/embed/zIWqTJu9HaA",
+        src: "https://www.youtube.com/embed/zIWqTJu9HaA?autoplay=1",
     },
 
     {
@@ -154,7 +154,7 @@ const data = [
         linkCount: "4",
         username: "AutoTraderTV",
         verified: true,
-        src: "https://www.youtube.com/embed/D3RO2xNKS6s",
+        src: "https://www.youtube.com/embed/D3RO2xNKS6s?autoplay=1",
     },
 
     {
@@ -177,7 +177,7 @@ const data = [
         linkCount: "3",
         username: "HaylsWorld",
         verified: true,
-        src: "https://www.youtube.com/embed/emrLEDH52e0",
+        src: "https://www.youtube.com/embed/emrLEDH52e0?autoplay=1",
     },
     {
         id: 9,
@@ -199,7 +199,7 @@ const data = [
         linkCount: "3",
         username: "NIGHTRIDEEE",
         verified: true,
-        src: "https://www.youtube.com/embed/ApYl1EF5dNs",
+        src: "https://www.youtube.com/embed/ApYl1EF5dNs?autoplay=1",
     },
     {
         id: 10,
@@ -222,7 +222,7 @@ const data = [
         linkCount: "4",
         username: "go4x4media",
         verified: true,
-        src: "https://www.youtube.com/embed/-wm71pIfT-s",
+        src: "https://www.youtube.com/embed/-wm71pIfT-s?autoplay=1",
     },
     {
         id: 11,
@@ -244,7 +244,7 @@ const data = [
         linkCount: "1",
         username: "GreatStackDev",
         verified: true,
-        src: "https://www.youtube.com/embed/Zb1zVeXLUf8",
+        src: "https://www.youtube.com/embed/Zb1zVeXLUf8?autoplay=1",
     },
     {
         id: 12,
@@ -266,7 +266,7 @@ const data = [
         linkCount: "1",
         username: "DrDebox",
         verified: true,
-        src: "https://www.youtube.com/embed/G_S2fPqGM_8",
+        src: "https://www.youtube.com/embed/G_S2fPqGM_8?autoplay=1",
     },
 
     {
@@ -289,7 +289,7 @@ const data = [
         linkCount: "4",
         username: "metroboomin",
         verified: true,
-        src: "https://www.youtube.com/embed/uWdHM3-2cpU",
+        src: "https://www.youtube.com/embed/uWdHM3-2cpU?autoplay=1",
     },
     {
         id: 14,
@@ -311,7 +311,7 @@ const data = [
         linkCount: "3",
         username: "WoyshnisMedia",
         verified: true,
-        src: "https://www.youtube.com/embed/Jvr0U2ZInoE",
+        src: "https://www.youtube.com/embed/Jvr0U2ZInoE?autoplay=1",
     },
     {
         id: 15,
@@ -333,7 +333,7 @@ const data = [
         linkCount: 1,
         username: "Apples",
         verified: true,
-        src: "https://www.youtube.com/embed/IY4x85zqoJM",
+        src: "https://www.youtube.com/embed/IY4x85zqoJM?autoplay=1",
     },
     {
         id: 16,
@@ -355,7 +355,7 @@ const data = [
         linkCount: "4",
         username: "MicrosoftWindows",
         verified: true,
-        src: "https://www.youtube.com/embed/Uh9643c2P6k",
+        src: "https://www.youtube.com/embed/Uh9643c2P6k?autoplay=1",
     },
 ];
 
