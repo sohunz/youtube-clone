@@ -9,8 +9,11 @@ const Category = () => {
                 <li className="bg-gray-600 py-1 px-3 rounded-lg text-white cursor-pointer">
                     All
                 </li>
-                {categories.map((item) => (
-                    <li className="bg-gray-200 py-1 px-3 rounded-md hover:bg-gray-300 cursor-pointer">
+                {categories.map((item, index) => (
+                    <li
+                        className="bg-gray-200 py-1 px-3 rounded-md hover:bg-gray-300 cursor-pointer"
+                        key={index}
+                    >
                         <p className="line-clamp-1">{item}</p>
                     </li>
                 ))}

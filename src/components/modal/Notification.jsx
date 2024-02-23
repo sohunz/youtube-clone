@@ -10,7 +10,7 @@ const Notification = ({ notification, setNotification }) => {
         <div className="w-full h-[80vh] overflow-y-scroll custom-scrollbar">
             {data.map((item) => {
                 return (
-                    <ul className="overflow-hidden">
+                    <ul className="overflow-hidden" key={item.id}>
                         <Link
                             to={`/channel/${item.username}`}
                             onClick={() => setNotification(!notification)}
