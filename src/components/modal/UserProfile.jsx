@@ -21,15 +21,15 @@ const UserProfile = () => {
             <hr />
             <div className="py-2 px-2">
                 <ul>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <FaGoogle size={23} />
                         <p>Google Account</p>
                     </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <PiUserSquareLight size={24} />
                         <p>Switch Account</p>
                     </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <PiSignIn size={24} />
                         <p>Sign out</p>
                     </li>
@@ -38,11 +38,11 @@ const UserProfile = () => {
             <hr />
             <div className="py-2 px-2">
                 <ul>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <BiMoviePlay size={23} />
                         <p>YouTube Studio</p>
                     </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <PiCurrencyCircleDollar size={24} />
 
                         <p>Purchases and memberships</p>
@@ -52,28 +52,28 @@ const UserProfile = () => {
             <hr />
             <div className="py-2 px-2">
                 <ul>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <RiShieldUserLine size={23} />
                         <p>Your data in YouTube</p>
                     </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <MdOutlineLightMode size={23} />
                         <p>Appearance: Light</p>
                     </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <HiOutlineLanguage size={23} />
                         <p>Language: English</p>
                     </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <TbUserShield size={23} />
                         <p>Restricted Mode: Off</p>
                     </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <CiGlobe size={23} />
                         <p>Location: Cambodia</p>
                     </li>
 
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <FaRegKeyboard size={23} />
                         <p>Keyboard shortcuts</p>
                     </li>
@@ -82,7 +82,7 @@ const UserProfile = () => {
             <hr />
             <div className="py-2 px-2">
                 <ul>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
+                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md cursor-pointer">
                         <IoSettingsOutline size={23} />
                         <p>Settings</p>
                     </li>

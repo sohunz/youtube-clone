@@ -22,19 +22,15 @@ const Navbar = ({ setSidebar, sidebar }) => {
     const [notification, setNotification] = useState(false);
     const [userProfile, setUserProfile] = useState(false);
 
+    const closeModal = () => {
+        setCreate(false);
+        setNotification(false);
+        setUserProfile(false);
+        setVoice(false);
+    };
+
     return (
         <div className="w-full mx-auto fixed top-0 left-0 bg-white z-20">
-            {/* voice modal */}
-            <div
-                className={
-                    voice
-                        ? "absolute bg-white min-w-[700px] h-[450px] border left-[25%] top-14 rounded-xl"
-                        : "hidden"
-                }
-            >
-                <Voice setvoice={setVoice} voice={voice} />
-            </div>
-
             <div className="flex justify-between py-2 lg:gap-5 md:gap-5 sm:gap-3 gap-3 px-5">
                 <div className="flex items-center gap-5">
                     <RxHamburgerMenu
@@ -61,18 +57,16 @@ const Navbar = ({ setSidebar, sidebar }) => {
                             <GoSearch color="gray" size={22} />
                         </button>
                     </div>
-                    <div
-                        className="bg-gray-100 rounded-full p-3 hover:bg-gray-200 relative group cursor-pointer"
-                        onClick={() => {
-                            setVoice(!voice);
-                            setCreate(false);
-                            setNotification(false);
-                            setUserProfile(false);
-                        }}
-                    >
+                    <div className="bg-gray-100 rounded-full p-3 hover:bg-gray-200 relative group ">
                         <HiMiniMicrophone
                             size={18}
                             className="cursor-pointer"
+                            onClick={() => {
+                                setVoice(!voice);
+                                setCreate(false);
+                                setNotification(false);
+                                setUserProfile(false);
+                            }}
                         />
                         <div
                             className={
@@ -85,6 +79,23 @@ const Navbar = ({ setSidebar, sidebar }) => {
                                 Search with your voice
                             </p>
                         </div>
+
+                        {/* voice modal */}
+                        <div
+                            className={
+                                voice
+                                    ? "absolute bg-white min-w-[700px] h-[450px] border right-0 top-14 rounded-xl z-40"
+                                    : "hidden"
+                            }
+                        >
+                            <Voice setvoice={setVoice} voice={voice} />
+                        </div>
+                        {voice && (
+                            <div
+                                className="fixed inset-0 bg-black opacity-50 z-30"
+                                onClick={closeModal}
+                            ></div>
+                        )}
                     </div>
                 </div>
                 <div className="flex items-center lg:gap-5 md:gap-5 sm:gap-1 gap-1">
@@ -117,12 +128,18 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         <div
                             className={
                                 create
-                                    ? "absolute bg-white w-[170px] border rounded-lg p-1 left-[-60px] top-[46px] block"
+                                    ? "absolute bg-white w-[170px] border rounded-lg p-1 left-[-60px] top-[46px] block z-40"
                                     : "hidden"
                             }
                         >
                             <Create />
                         </div>
+                        {create && (
+                            <div
+                                className="fixed inset-0 bg-black opacity-0 z-30"
+                                onClick={closeModal}
+                            ></div>
+                        )}
                     </div>
                     <div className="rounded-full p-2 hover:bg-gray-100 relative group">
                         <IoMdNotificationsOutline
@@ -150,7 +167,7 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         <div
                             className={
                                 notification
-                                    ? "absolute bg-white min-w-[500px]  border rounded-xl p-1 right-[0px] top-[46px]"
+                                    ? "absolute bg-white min-w-[500px]  border rounded-xl p-1 right-[0px] top-[46px] z-40"
                                     : "hidden"
                             }
                         >
@@ -164,10 +181,16 @@ const Navbar = ({ setSidebar, sidebar }) => {
                                 setNotification={setNotification}
                             />
                         </div>
+                        {notification && (
+                            <div
+                                className="fixed inset-0 bg-black opacity-0 z-30"
+                                onClick={closeModal}
+                            ></div>
+                        )}
                     </div>
-                    <div className="bg-gray-500 w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer relative">
+                    <div className="bg-gray-500 w-[35px] h-[35px] text-white flex justify-center items-center rounded-full relative">
                         <p
-                            className="text-xl"
+                            className="text-xl cursor-pointer"
                             onClick={() => {
                                 setUserProfile(!userProfile);
                                 setCreate(false);
@@ -182,7 +205,7 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         <div
                             className={
                                 userProfile
-                                    ? "absolute bg-white min-w-[350px] text-black  border rounded-xl right-[0px] top-[46px]"
+                                    ? "absolute bg-white min-w-[350px] text-black  border rounded-xl right-[0px] top-[46px] z-40"
                                     : "hidden"
                             }
                         >
@@ -193,13 +216,19 @@ const Navbar = ({ setSidebar, sidebar }) => {
                                 <div>
                                     <p>JDM</p>
                                     <p>@jdm</p>
-                                    <p className="text-blue-500 pt-2">
+                                    <p className="text-blue-500 pt-2 cursor-pointer">
                                         View your channel
                                     </p>
                                 </div>
                             </div>
                             <UserProfile />
                         </div>
+                        {userProfile && (
+                            <div
+                                className="fixed inset-0 bg-black opacity-0 z-30"
+                                onClick={closeModal}
+                            ></div>
+                        )}
                     </div>
                 </div>
             </div>
