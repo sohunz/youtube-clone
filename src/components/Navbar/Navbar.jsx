@@ -9,9 +9,15 @@ import { Link } from "react-router-dom";
 import { IoCloseOutline } from "react-icons/io5";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { CiStreamOn } from "react-icons/ci";
+import Voice from "../modal/Voice";
+import { IoSettingsOutline } from "react-icons/io5";
+import Create from "../modal/Create";
+import Notification from "../modal/Notification";
 
 const Navbar = ({ setSidebar, sidebar }) => {
     const [voice, setVoice] = useState(false);
+    const [create, setCreate] = useState(false);
+    const [notification, setNotification] = useState(false);
 
     return (
         <div className="w-full mx-auto fixed top-0 left-0 bg-white z-20">
@@ -23,29 +29,7 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         : "hidden"
                 }
             >
-                <div className="flex flex-col justify-center items-center p-10">
-                    <div
-                        className="absolute top-3 right-3 hover:bg-gray-100 rounded-full p-2 cursor-pointer"
-                        onClick={() => setVoice(!voice)}
-                    >
-                        <IoCloseOutline size={30} />
-                    </div>
-                    <div className="mb-20">
-                        <p className="text-3xl pb-5">Search with your voice</p>
-                        <p className="text-gray-600">
-                            To search by voice, go to your browser settings and
-                            allow access to microphone
-                        </p>
-                    </div>
-                    <div className="bg-gray-200 p-5 rounded-full cursor-pointer">
-                        <HiMiniMicrophone
-                            size={40}
-                            width={40}
-                            height={40}
-                            className="cursor-pointer"
-                        />
-                    </div>
-                </div>
+                <Voice setvoice={setVoice} voice={voice} />
             </div>
 
             <div className="flex justify-between py-2 lg:gap-5 md:gap-5 sm:gap-3 gap-3 px-5">
@@ -103,35 +87,61 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         <HiOutlineVideoCamera
                             className="cursor-pointer"
                             size={20}
+                            onClick={() => setCreate(!create)}
                         />
                         <div className="bg-black opacity-70 text-white rounded-md absolute left-[-3px] bottom-[-45px] hidden group-hover:block">
-                            <p className="text-[11px] p-3 text-center hidden">
+                            <p
+                                className={
+                                    create
+                                        ? "hidden"
+                                        : "text-[11px] p-3 text-center"
+                                }
+                            >
                                 Create
                             </p>
                         </div>
                         {/* create modal */}
-                        <div className="absolute bg-white w-[170px] border rounded-lg p-1 left-[-10px] top-[45px]">
-                            <ul>
-                                <li className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
-                                    <AiOutlinePlaySquare size={23} />
-                                    <p>Upload video</p>
-                                </li>
-                                <li className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
-                                    <CiStreamOn size={23} />
-                                    <p>Go live</p>
-                                </li>
-                            </ul>
+                        <div
+                            className={
+                                create
+                                    ? "absolute bg-white w-[170px] border rounded-lg p-1 left-[-60px] top-[46px] block"
+                                    : "hidden"
+                            }
+                        >
+                            <Create />
                         </div>
                     </div>
                     <div className="rounded-full p-2 hover:bg-gray-100 relative group">
                         <IoMdNotificationsOutline
                             className="cursor-pointer"
                             size={24}
+                            onClick={() => setNotification(!notification)}
                         />
-                        <div className="bg-black opacity-70 text-white rounded-md absolute left-[-40px] bottom-[-45px] w-[90px] hidden group-hover:block">
+                        <div
+                            className={
+                                notification
+                                    ? "hidden"
+                                    : "bg-black opacity-70 text-white rounded-md absolute left-[-40px] bottom-[-45px] w-[90px] hidden group-hover:block"
+                            }
+                        >
                             <p className="text-[11px] text-center p-3">
                                 Notifications
                             </p>
+                        </div>
+                        {/* notification modal min-h-[650px] */}
+                        <div
+                            className={
+                                notification
+                                    ? "absolute bg-white min-w-[500px]  border rounded-xl p-1 right-[0px] top-[46px]"
+                                    : "hidden"
+                            }
+                        >
+                            <div className="flex items-center justify-between p-3">
+                                <p className="text-lg">Notifications</p>
+                                <IoSettingsOutline size={23} />
+                            </div>{" "}
+                            <hr />
+                            <Notification />
                         </div>
                     </div>
                     <div className="bg-gray-500 w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer">
