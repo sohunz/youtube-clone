@@ -14,10 +14,13 @@ import { IoSettingsOutline } from "react-icons/io5";
 import Create from "../modal/Create";
 import Notification from "../modal/Notification";
 
+import UserProfile from "../modal/UserProfile";
+
 const Navbar = ({ setSidebar, sidebar }) => {
     const [voice, setVoice] = useState(false);
     const [create, setCreate] = useState(false);
     const [notification, setNotification] = useState(false);
+    const [userProfile, setUserProfile] = useState(false);
 
     return (
         <div className="w-full mx-auto fixed top-0 left-0 bg-white z-20">
@@ -60,7 +63,12 @@ const Navbar = ({ setSidebar, sidebar }) => {
                     </div>
                     <div
                         className="bg-gray-100 rounded-full p-3 hover:bg-gray-200 relative group cursor-pointer"
-                        onClick={() => setVoice(!voice)}
+                        onClick={() => {
+                            setVoice(!voice);
+                            setCreate(false);
+                            setNotification(false);
+                            setUserProfile(false);
+                        }}
                     >
                         <HiMiniMicrophone
                             size={18}
@@ -87,7 +95,12 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         <HiOutlineVideoCamera
                             className="cursor-pointer"
                             size={20}
-                            onClick={() => setCreate(!create)}
+                            onClick={() => {
+                                setCreate(!create);
+                                setNotification(false);
+                                setUserProfile(false);
+                                setVoice(false);
+                            }}
                         />
                         <div className="bg-black opacity-70 text-white rounded-md absolute left-[-3px] bottom-[-45px] hidden group-hover:block">
                             <p
@@ -115,7 +128,12 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         <IoMdNotificationsOutline
                             className="cursor-pointer"
                             size={24}
-                            onClick={() => setNotification(!notification)}
+                            onClick={() => {
+                                setNotification(!notification);
+                                setCreate(false);
+                                setUserProfile(false);
+                                setVoice(false);
+                            }}
                         />
                         <div
                             className={
@@ -141,11 +159,47 @@ const Navbar = ({ setSidebar, sidebar }) => {
                                 <IoSettingsOutline size={23} />
                             </div>{" "}
                             <hr />
-                            <Notification />
+                            <Notification
+                                notification={notification}
+                                setNotification={setNotification}
+                            />
                         </div>
                     </div>
-                    <div className="bg-gray-500 w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer">
-                        <p className="text-xl">J</p>
+                    <div className="bg-gray-500 w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer relative">
+                        <p
+                            className="text-xl"
+                            onClick={() => {
+                                setUserProfile(!userProfile);
+                                setCreate(false);
+                                setNotification(false);
+                                setVoice(false);
+                            }}
+                        >
+                            J
+                        </p>
+
+                        {/* user profile modal */}
+                        <div
+                            className={
+                                userProfile
+                                    ? "absolute bg-white min-w-[350px] text-black  border rounded-xl right-[0px] top-[46px]"
+                                    : "hidden"
+                            }
+                        >
+                            <div className="flex gap-5 p-5">
+                                <div className="bg-gray-500 w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer relative">
+                                    <p className="text-xl">J</p>
+                                </div>
+                                <div>
+                                    <p>JDM</p>
+                                    <p>@jdm</p>
+                                    <p className="text-blue-500 pt-2">
+                                        View your channel
+                                    </p>
+                                </div>
+                            </div>
+                            <UserProfile />
+                        </div>
                     </div>
                 </div>
             </div>
