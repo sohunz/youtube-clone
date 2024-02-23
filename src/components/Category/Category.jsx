@@ -4,7 +4,7 @@ import categories from "../../../data/categories";
 
 const Category = () => {
     return (
-        <div className="w-[1440px] mt-[55px] z-40 fixed left-auto top-0 bg-white py-5 mx-auto">
+        <div className="w-[1440px] mt-[55px] z-10 fixed left-auto top-0 bg-white py-5 mx-auto">
             <ul className="max-w-[1440px] mx-auto flex gap-3">
                 <li className="bg-gray-600 py-1 px-3 rounded-lg text-white cursor-pointer">
                     All
