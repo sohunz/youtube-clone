@@ -11,6 +11,8 @@ import { VscVerifiedFilled } from "react-icons/vsc";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { BsChevronDown } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Description from "../../components/Description/Description";
+import Comment from "../../components/Comment/Comment";
 
 const Video = () => {
     const data = useContext(DataContext);
@@ -118,6 +120,8 @@ const Video = () => {
                                 </div>
                             </div>
                         </div>
+                        <Description />
+                        <Comment />
                     </div>
                 );
             })}
