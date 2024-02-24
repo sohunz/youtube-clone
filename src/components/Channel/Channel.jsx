@@ -10,6 +10,7 @@ import { RiPlayList2Fill } from "react-icons/ri";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Channel = () => {
     const { username } = useParams();
@@ -173,8 +174,9 @@ const Channel = () => {
                             <hr />
                             {dataFiltered.map((item) => {
                                 return (
-                                    <div
-                                        className="w-full  relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5"
+                                    <Link
+                                        to={`/channel/${item.id}`}
+                                        className="w-full  relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5 border"
                                         key={item.id}
                                     >
                                         <div className="max-w-[300px] h-auto overflow-hidden rounded-xl relative">
@@ -244,7 +246,7 @@ const Channel = () => {
                                                 />
                                             </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 );
                             })}
                         </div>

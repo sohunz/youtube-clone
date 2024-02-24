@@ -5,6 +5,7 @@ import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { PiDot } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import DataContext from "../../context/DataContext";
+import { VscVerifiedFilled } from "react-icons/vsc";
 
 const FeedCard = () => {
     const data = useContext(DataContext);
@@ -13,7 +14,7 @@ const FeedCard = () => {
             {data.map((item) => {
                 return (
                     <Link
-                        to={`/channel/${item.username}`}
+                        to={`/channel/${item.id}`}
                         className="relative group cursor-pointer"
                         key={item.id}
                     >
@@ -42,8 +43,16 @@ const FeedCard = () => {
                                     >
                                         {item.title}
                                     </p>
-                                    <p className="text-gray-600">
+                                    <p className="text-gray-600 flex items-center gap-1">
                                         {item.author}
+                                        {item.verified ? (
+                                            <VscVerifiedFilled
+                                                size={13}
+                                                color="gray"
+                                            />
+                                        ) : (
+                                            ""
+                                        )}
                                     </p>
                                     <p className="text-gray-600 flex flex-row items-center text-[13px]">
                                         {item.views} views

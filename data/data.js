@@ -86,7 +86,7 @@ const data = [
         link: "fireship.io",
         linkCount: "5",
         username: "Fireship",
-        verified: true,
+        verified: false,
         src: "https://www.youtube.com/embed/X8ipUgXH6jw?autoplay=1",
     },
     {

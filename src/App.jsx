@@ -19,7 +19,11 @@ const App = () => {
                 {/* <Category /> */}
                 <Routes>
                     <Route path="/" element={<Homepage sidebar={sidebar} />} />
-                    <Route path="/channel/:username" element={<Video />} />
+                    <Route path="/channel/:id" element={<Video />} />
+                    <Route
+                        path="/channel/user/:username"
+                        element={<Channel />}
+                    />
                 </Routes>
             </DataContext.Provider>
         </div>

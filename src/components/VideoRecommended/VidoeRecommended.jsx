@@ -4,6 +4,8 @@ import { RiPlayList2Fill } from "react-icons/ri";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { PiDot } from "react-icons/pi";
 import DataContext from "../../context/DataContext";
+import { VscVerifiedFilled } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 function VidoeRecommended() {
     const data = useContext(DataContext);
@@ -12,8 +14,9 @@ function VidoeRecommended() {
         <>
             {data.map((item, index) => {
                 return (
-                    <div
-                        className="w-full  relative group cursor-pointer flex gap-3 justify-center items-center"
+                    <Link
+                        to={`/channel/${item.id}`}
+                        className="w-full  relative group cursor-pointer flex gap-3 justify-center"
                         key={index}
                     >
                         <div className="max-w-[200px] h-full overflow-hidden border rounded-xl relative">
@@ -37,26 +40,29 @@ function VidoeRecommended() {
                         <div className="w-full flex gap-3 rounded-lg">
                             <div className="w-full flex gap-1 rounded-lg">
                                 <div className=" w-full flex flex-col">
-                                    <p
-                                        className="text-xl line-clamp-2 "
-                                        style={{
-                                            fontWeight: "500",
-                                        }}
-                                    >
+                                    <p className="text-md line-clamp-2 ">
                                         {item.title}
                                     </p>
-                                    <div className="w-full flex flex-col">
+                                    <div className="w-full flex flex-col pt-1">
                                         <div className="flex items-center">
-                                            <p className="text-gray-600 text-sm">
+                                            <p className="text-gray-600 text-sm flex items-center gap-1">
                                                 {item.author}
+                                                {item.verified ? (
+                                                    <VscVerifiedFilled
+                                                        size={13}
+                                                        color="gray"
+                                                    />
+                                                ) : (
+                                                    ""
+                                                )}
                                             </p>
                                         </div>
                                         <div className="w-full text-gray-600 flex flex-row items-center ">
-                                            <p className="text-sm">
-                                                {item.views}
+                                            <p className="text-[12px]">
+                                                {item.views} views
                                             </p>
                                             <PiDot size={25} className=" w-5" />
-                                            <p className="text-sm">
+                                            <p className="text-[12px]">
                                                 {item.upload}
                                             </p>
                                         </div>
@@ -65,12 +71,12 @@ function VidoeRecommended() {
                             </div>
                             <p>
                                 <PiDotsThreeVerticalBold
-                                    size={23}
+                                    size={20}
                                     className="cursor-pointer"
                                 />
                             </p>
                         </div>
-                    </div>
+                    </Link>
                 );
             })}
         </>
