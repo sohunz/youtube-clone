@@ -35,12 +35,20 @@ const CreateVideo = () => {
         const file = e.target.files[0];
 
         // Determine whether it's a profile or thumbnail
-        const fieldName = fileType === "profile" ? "profile" : "thumbnail";
+        const fieldName =
+            fileType === "profile"
+                ? "profile"
+                : fileType === "thumbnail"
+                ? "thumbnail"
+                : fileType === "banner"
+                ? "banner"
+                : "channelProfile";
 
         // Convert the image to a data URL
         const reader = new FileReader();
         reader.onload = (event) => {
             const dataUrl = event.target.result;
+
             // Store the data URL in the array
             setImagePaths([...imagePaths, dataUrl]);
 
@@ -170,8 +178,7 @@ const CreateVideo = () => {
                         placeholder="Channel Profile"
                         className="border p-2 rounded-md outline-none pl-3"
                         name="channelProfile"
-                        value={formData.channelProfile}
-                        onChange={handleInputChange}
+                        onChange={(e) => handleFileChange(e, "channelProfile")}
                     />
 
                     <input
@@ -179,8 +186,7 @@ const CreateVideo = () => {
                         placeholder="banner"
                         className="border p-2 rounded-md outline-none pl-3"
                         name="banner"
-                        value={formData.banner}
-                        onChange={handleInputChange}
+                        onChange={(e) => handleFileChange(e, "banner")}
                     />
 
                     <input
