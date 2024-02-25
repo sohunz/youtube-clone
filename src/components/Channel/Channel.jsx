@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import DataContext from "../../context/DataContext";
 import { PiDot } from "react-icons/pi";
@@ -11,6 +11,7 @@ import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { Link } from "react-router-dom";
+import SubscribeContext from "../../context/SubscribeContext";
 
 const Channel = () => {
     const { username } = useParams();
@@ -18,7 +19,7 @@ const Channel = () => {
     const dataFiltered = data.filter((item) => item.username == username);
 
     const [activeTab, setActiveTab] = useState("Home");
-    const [subscribe, setSubscribe] = useState(false);
+    const { handleSubscribeToggle, subscribe } = useContext(SubscribeContext);
 
     const handleTabClick = (tab) => {
         setActiveTab(tab);
@@ -82,13 +83,38 @@ const Channel = () => {
                                         </span>
                                         &nbsp; and {item.linkCount} more link
                                     </p>
+                                    {/* <div
+                                        className={
+                                            subscribe
+                                                ? "flex items-center gap-2 bg-gray-200 rounded-full py-2 px-4 border-0 cursor-pointer w-[160px] h-[40px]"
+                                                : "flex items-center gap-3 bg-black text-white rounded-full px-4 border-0 cursor-pointer w-[120px] justify-center py-[9px] h-[40px] "
+                                        }
+                                        onClick={() => {
+                                            setSubscribe(!subscribe);
+                                        }}
+                                    >
+                                        {subscribe ? (
+                                            <IoMdNotificationsOutline
+                                                size={25}
+                                            />
+                                        ) : (
+                                            ""
+                                        )}
+                                        {subscribe ? (
+                                            <p>Subscribed</p>
+                                        ) : (
+                                            <p>Subscribe</p>
+                                        )}
+                                        {subscribe ? <BsChevronDown /> : ""}
+                                    </div> */}
+
                                     <div
                                         className={
                                             subscribe
                                                 ? "flex items-center gap-2 bg-gray-200 rounded-full py-2 px-4 border-0 cursor-pointer w-[160px] h-[40px]"
                                                 : "flex items-center gap-3 bg-black text-white rounded-full px-4 border-0 cursor-pointer w-[120px] justify-center py-[9px] h-[40px] "
                                         }
-                                        onClick={() => setSubscribe(!subscribe)}
+                                        onClick={handleSubscribeToggle}
                                     >
                                         {subscribe ? (
                                             <IoMdNotificationsOutline

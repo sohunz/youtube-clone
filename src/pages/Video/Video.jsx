@@ -13,6 +13,7 @@ import { BsChevronDown } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Description from "../../components/Description/Description";
 import Comment from "../../components/Comment/Comment";
+import SubscribeContext from "../../context/SubscribeContext";
 
 const Video = () => {
     const data = useContext(DataContext);
@@ -20,7 +21,7 @@ const Video = () => {
 
     const dataFiltered = data.filter((item) => item.id == id);
 
-    const [subscribe, setSubscribe] = useState(false);
+    const { handleSubscribeToggle, subscribe } = useContext(SubscribeContext);
 
     return (
         <div className="max-w-[1410px] mx-auto mt-[70px] grid grid-cols-12">
@@ -73,9 +74,7 @@ const Video = () => {
                                                     ? "flex items-center gap-2 bg-gray-200 rounded-full py-2 px-4 border-0 cursor-pointer w-[160px] h-[40px]"
                                                     : "flex items-center gap-3 bg-black text-white rounded-full px-4 border-0 cursor-pointer w-[110px] justify-center py-[9px] h-[40px] "
                                             }
-                                            onClick={() =>
-                                                setSubscribe(!subscribe)
-                                            }
+                                            onClick={handleSubscribeToggle}
                                         >
                                             {subscribe ? (
                                                 <IoMdNotificationsOutline

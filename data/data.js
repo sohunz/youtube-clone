@@ -11,6 +11,7 @@ const data = [
         channelProfile:
             "https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "18.8M",
+        subscribed: false,
         videos: 185,
         description:
             "Welcome to the official Apple YouTube channel. Here you will find news about product launches, tutorials, and other great content. Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today Apple continues to be a global leader in innovation with products like iPhone, iPad, Mac, Apple Watch and Apple Vision Pro. Our six software platforms (iOS, iPadOS, macOS, watchOS, tvOS, and visionOS) provide seamless experiences across Apple devices. Breakthrough services include the App Store, Apple Music, Apple Pay, and iCloud. And Apple keeps pursuing innovation with products like HomePod, Apple Fitness+, and Apple Card. Apple’s more than 160,000 employees are dedicated to making the best products on earth, and to leaving the world better than we found it. ",
