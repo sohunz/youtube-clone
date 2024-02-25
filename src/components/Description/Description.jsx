@@ -10,9 +10,12 @@ const Description = () => {
 
     return (
         <>
-            {dataFiltered.map((item) => {
+            {dataFiltered.map((item, index) => {
                 return (
-                    <div className="mr-5 mt-5 rounded-lg p-4 bg-gray-100">
+                    <div
+                        className="mr-5 mt-5 rounded-lg p-4 bg-gray-100"
+                        key={index}
+                    >
                         <div className="w-[70%] font-[11px]">
                             <div className="flex items-center">
                                 <p>{item.views} views </p> &nbsp;&nbsp;

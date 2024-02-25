@@ -8,6 +8,7 @@ import data from "../data/data";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Video from "./pages/Video/Video";
 import SubscribeContext from "./context/SubscribeContext";
+import CreateVideo from "./components/modal/CreateVideo";
 
 const App = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -42,6 +43,7 @@ const App = () => {
                             path="/channel/user/:username"
                             element={<Channel />}
                         />
+                        <Route path="/upload" element={<CreateVideo />} />
                     </Routes>
                 </SubscribeContext.Provider>
             </DataContext.Provider>

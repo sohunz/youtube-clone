@@ -28,9 +28,12 @@ const Channel = () => {
     return (
         <div className=" w-full mt-[65px]">
             <div className="max-w-[1350px] mx-auto px-16 pl-28">
-                {dataFiltered.map((item) => {
+                {dataFiltered.map((item, index) => {
                     return (
-                        <div className="w-full lg:h-[200px] md:h-[150px] sm:h-[140px] h-[100px]">
+                        <div
+                            className="w-full lg:h-[200px] md:h-[150px] sm:h-[140px] h-[100px]"
+                            key={index}
+                        >
                             <img
                                 src={item.banner}
                                 alt="Your Channel Logo"

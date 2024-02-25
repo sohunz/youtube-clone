@@ -1,13 +1,16 @@
 import React from "react";
 import { AiOutlinePlaySquare } from "react-icons/ai";
 import { CiStreamOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const Create = () => {
     return (
         <ul>
             <li className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
                 <AiOutlinePlaySquare size={23} />
-                <p>Upload video</p>
+                <Link to="/upload">
+                    <p>Upload video</p>
+                </Link>
             </li>
             <li className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
                 <CiStreamOn size={23} />

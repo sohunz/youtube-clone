@@ -105,7 +105,7 @@ const data = [
         videos: "1.6K",
         description:
             "MKBHD: Quality Tech Videos | YouTuber | Geek | Consumer Electronics | Tech Head | Internet Personality!",
-        banner: "https://yt3.googleusercontent.com/jlU4qLJSrAxq-7XGjVh64XKUQb2Sj_zcIZzyWA6gN4PZnfOLA7DUJ30g94ZQWCBhzHOxZ4Ec=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+        banner: "https://yt3.googleusercontent.com/KhLiJiH9xE8AiPUz9fLD9rOQYNH_EVhVuaKyAu2hp8alAhtkV4IQ9-Dfsoge8E11Im0nxDgjsQ=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "twitter.com/MKBHD",
         linkCount: "4",
         username: "mkbhd",
