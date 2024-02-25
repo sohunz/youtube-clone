@@ -30,10 +30,11 @@ const FeedCard = () => {
                         </div>
                         <div className="w-full flex gap-3 rounded-lg pt-2 relative">
                             <div className="w-full flex gap-3 rounded-lg">
-                                <div className="bg-gray-500 min-w-[35px] h-[35px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden ">
+                                <div className="w-[45px] h-[45px] min-w-[45px] min-h-[45px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
                                     <img
-                                        src={item.profile}
-                                        className="w-[100%] h-[100%]"
+                                        src={item.channelProfile}
+                                        alt=""
+                                        className="w-full h-full object-cover rounded-full"
                                     />
                                 </div>
                                 <div>

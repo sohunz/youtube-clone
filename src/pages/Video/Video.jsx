@@ -47,11 +47,11 @@ const Video = () => {
                                 <div className="w-full flex gap-3 rounded-lg">
                                     <Link
                                         to={`/channel/user/${item.username}`}
-                                        className="bg-gray-500 min-w-[45px] h-[45px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden "
+                                        className="w-[45px] h-[45px] min-w-[45px] min-h-[45px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden"
                                     >
                                         <img
                                             src={item.channelProfile}
-                                            className="w-[100%] h-[100%]"
+                                            className="w-full h-full object-cover rounded-full"
                                         />
                                     </Link>
                                     <div className="flex gap-6 items-center">

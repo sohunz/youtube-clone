@@ -8,7 +8,7 @@ const CreateVideo = () => {
         id: Math.random(),
         title: "",
         views: "590K",
-        profile: "", // Keep track of the profile image path
+        // profile: "", // Keep track of the profile image path
         upload: "1 min ago",
         author: "",
         thumbnail: "", // Keep track of the thumbnail image path
@@ -36,9 +36,7 @@ const CreateVideo = () => {
 
         // Determine whether it's a profile or thumbnail
         const fieldName =
-            fileType === "profile"
-                ? "profile"
-                : fileType === "thumbnail"
+            fileType === "thumbnail"
                 ? "thumbnail"
                 : fileType === "banner"
                 ? "banner"
@@ -64,7 +62,7 @@ const CreateVideo = () => {
             id: "",
             title: "",
             views: "",
-            profile: "",
+            // profile: "",
             upload: "",
             author: "",
             thumbnail: "",
@@ -81,9 +79,9 @@ const CreateVideo = () => {
     };
 
     return (
-        <div className="w-full">
+        <div className="w-full h-[87vh] bg-gray-100">
             <div className="max-w-[1440px] mx-auto mt-24 flex justify-center">
-                <div className="w-[50%] border flex flex-col justify-center p-10 gap-3 rounded-xl">
+                <div className="w-[50%] mt-12 border flex flex-col justify-center p-10 gap-3 rounded-2xl bg-white">
                     <input
                         type="text"
                         placeholder="Id"
@@ -156,50 +154,83 @@ const CreateVideo = () => {
                         value={formData.upload}
                         onChange={handleInputChange}
                     />
-                    <input
-                        type="text"
-                        placeholder="Title"
-                        className="border p-2 rounded-md outline-none pl-3"
-                        name="title"
-                        value={formData.title}
-                        onChange={handleInputChange}
-                    />
 
-                    <input
-                        type="text"
-                        placeholder="Author"
-                        className="border p-2 rounded-md outline-none pl-3"
-                        name="author"
-                        value={formData.author}
-                        onChange={handleInputChange}
-                    />
-                    <input
-                        type="file"
-                        placeholder="Channel Profile"
-                        className="border p-2 rounded-md outline-none pl-3"
-                        name="channelProfile"
-                        onChange={(e) => handleFileChange(e, "channelProfile")}
-                    />
+                    <div className="grid grid-cols-2 gap-5 mb-3">
+                        <div className="grid">
+                            <input
+                                type="text"
+                                placeholder="Title"
+                                className="border p-2 rounded-md outline-none pl-3"
+                                name="title"
+                                value={formData.title}
+                                onChange={handleInputChange}
+                            />
+                            <p className="pt-2 text-gray-400 text-sm">
+                                Video Title
+                            </p>
+                        </div>
 
-                    <input
-                        type="file"
-                        placeholder="banner"
-                        className="border p-2 rounded-md outline-none pl-3"
-                        name="banner"
-                        onChange={(e) => handleFileChange(e, "banner")}
-                    />
+                        <div className="grid">
+                            <input
+                                type="text"
+                                placeholder="Author"
+                                className="border p-2 rounded-md outline-none pl-3"
+                                name="author"
+                                value={formData.author}
+                                onChange={handleInputChange}
+                            />
+                            <p className="pt-2 text-gray-400 text-sm">
+                                Channel Name
+                            </p>
+                        </div>
+                    </div>
 
-                    <input
-                        type="text"
-                        placeholder="src"
-                        className="border p-2 rounded-md outline-none pl-3"
-                        name="src"
-                        value={formData.src}
-                        onChange={handleInputChange}
-                    />
+                    <div className="grid">
+                        <input
+                            type="text"
+                            placeholder="YouTube Link"
+                            className="border p-2 rounded-md outline-none pl-3"
+                            name="src"
+                            value={formData.src}
+                            onChange={handleInputChange}
+                        />
+                        <p className="pt-2 text-gray-400 text-sm">
+                            Get text by embed link from youtube
+                        </p>
+                    </div>
+
+                    <div className="flex flex-row justify-between mt-10 mb-3">
+                        <div>
+                            <input
+                                type="file"
+                                placeholder="Channel Profile"
+                                className="border p-2 rounded-md outline-none pl-3"
+                                name="channelProfile"
+                                onChange={(e) =>
+                                    handleFileChange(e, "channelProfile")
+                                }
+                            />
+                            <p className="pt-2 text-gray-400 text-sm">
+                                Channel Profile
+                            </p>
+                        </div>
+
+                        <div>
+                            <input
+                                type="file"
+                                placeholder="banner"
+                                className="border p-2 rounded-md outline-none pl-3"
+                                name="banner"
+                                onChange={(e) => handleFileChange(e, "banner")}
+                            />
+                            <p className="pt-2 text-gray-400 text-sm">
+                                Channel Banner
+                            </p>
+                        </div>
+                    </div>
 
                     <div className="flex flex-row gap-2 justify-between">
-                        <div>
+                        {/* <div>
                             <input
                                 type="file"
                                 placeholder="Profile"
@@ -207,8 +238,10 @@ const CreateVideo = () => {
                                 name="profile"
                                 onChange={(e) => handleFileChange(e, "profile")}
                             />
-                            <p className="pt-1 text-gray-500">Choose Profile</p>
-                        </div>
+                            <p className="pt-2 text-gray-400 text-sm">
+                                Small Profile
+                            </p>
+                        </div> */}
                         <div>
                             <input
                                 type="file"
@@ -219,16 +252,16 @@ const CreateVideo = () => {
                                     handleFileChange(e, "thumbnail")
                                 }
                             />
-                            <p className="pt-1 text-gray-500">
-                                Choose Thumbnail
+                            <p className="pt-2 text-gray-400 text-sm">
+                                Video Thumbnail
                             </p>
                         </div>
                     </div>
                     <button
-                        className="border p-2 mt-5 rounded-md outline-none pl-3 bg-gray-100"
+                        className="w-[150px] mx-auto border py-[8px] mt-5 rounded-md  bg-blue-700 text-white text-lg flex justify-center items-center"
                         onClick={handleSubmit}
                     >
-                        Submit
+                        Create
                     </button>
                 </div>
             </div>

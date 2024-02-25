@@ -40,11 +40,18 @@ const Channel = () => {
                                 className="w-full h-full object-cover rounded-xl"
                             />
                             <div className="lg:pt-7 md:pt-6 sm:pt-5 pt-3 flex gap-7">
-                                <div className="min-w-[160px] max-h-[160px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
+                                {/* <div className="min-w-[160px] max-h-[160px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
                                     <img
                                         src={item.channelProfile}
                                         alt=""
                                         className="min-w-[160px] max-h-[160px] "
+                                    />
+                                </div> */}
+                                <div className="w-[145px] h-[145px] min-w-[145px] min-h-[145px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
+                                    <img
+                                        src={item.channelProfile}
+                                        alt=""
+                                        className="w-full h-full object-cover rounded-full"
                                     />
                                 </div>
                                 <div className="inline-flex flex-col gap-2">
