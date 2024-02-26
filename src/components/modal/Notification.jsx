@@ -17,10 +17,13 @@ const Notification = ({ notification, setNotification }) => {
                         >
                             <li className="flex justify-between gap-5 hover:bg-gray-100 px-3 py-7 rounded-lg cursor-pointer">
                                 <div className="flex gap-3">
-                                    <img
-                                        src={item.profile}
-                                        className="h-[50px] rounded-full"
-                                    />
+                                    <div className="w-[50px] h-[50px] min-w-[50px] min-h-[50px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
+                                        <img
+                                            src={item.profile}
+                                            alt=""
+                                            className="w-full h-full object-cover rounded-full"
+                                        />
+                                    </div>
 
                                     <div>
                                         <p>
