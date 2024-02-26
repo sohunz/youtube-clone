@@ -5,6 +5,7 @@ import SubscribeContext from "../../context/SubscribeContext";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { BsChevronDown } from "react-icons/bs";
 import { VscVerifiedFilled } from "react-icons/vsc";
+import { Link } from "react-router-dom";
 
 const Subscription = () => {
     const data = useContext(DataContext);
@@ -14,7 +15,8 @@ const Subscription = () => {
         <div className="w-full mt-24">
             {data.map((item) => {
                 return (
-                    <div
+                    <Link
+                        to={`/channel/user/${item.username}`}
                         className="max-w-[900px] mx-auto flex justify-between items-center gap-20 mb-6"
                         key={item.id}
                     >
@@ -72,7 +74,7 @@ const Subscription = () => {
                                 {subscribe ? <BsChevronDown /> : ""}
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 );
             })}
         </div>

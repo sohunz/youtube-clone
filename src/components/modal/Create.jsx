@@ -10,7 +10,7 @@ const Create = ({ closeModal }) => {
 
     return (
         <ul>
-            <li className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
+            <li className="flex items-center gap-3 justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
                 <AiOutlinePlaySquare size={23} />
                 <Link to="/upload" onClick={handleUploadClick}>
                     <p>Upload video</p>
@@ -19,7 +19,7 @@ const Create = ({ closeModal }) => {
             <li>
                 <Link
                     to="/empty"
-                    className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer"
+                    className="flex items-center gap-3 justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer"
                     onClick={handleUploadClick}
                 >
                     <CiStreamOn size={23} />

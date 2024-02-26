@@ -214,7 +214,7 @@ const Channel = () => {
                                 return (
                                     <Link
                                         to={`/video/${item.id}`}
-                                        className="w-full  relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5 border"
+                                        className="w-full  relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5"
                                         key={item.id}
                                     >
                                         <div className="max-w-[300px] h-auto overflow-hidden rounded-xl relative">
