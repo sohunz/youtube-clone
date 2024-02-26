@@ -213,7 +213,7 @@ const Channel = () => {
                             {dataFiltered.map((item) => {
                                 return (
                                     <Link
-                                        to={`/channel/${item.id}`}
+                                        to={`/video/${item.id}`}
                                         className="w-full  relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5 border"
                                         key={item.id}
                                     >

@@ -12,7 +12,7 @@ const Notification = ({ notification, setNotification }) => {
                 return (
                     <ul className="overflow-hidden" key={item.id}>
                         <Link
-                            to={`/channel/${item.id}`}
+                            to={`/video/${item.id}`}
                             onClick={() => setNotification(!notification)}
                         >
                             <li className="flex justify-between gap-5 hover:bg-gray-100 px-3 py-7 rounded-lg cursor-pointer">

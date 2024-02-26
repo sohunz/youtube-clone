@@ -14,7 +14,7 @@ const FeedCard = () => {
             {data.map((item) => {
                 return (
                     <Link
-                        to={`/channel/${item.id}`}
+                        to={`/video/${item.id}`}
                         className="relative group cursor-pointer"
                         key={item.id}
                     >

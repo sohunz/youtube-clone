@@ -15,7 +15,7 @@ function VidoeRecommended() {
             {data.map((item, index) => {
                 return (
                     <Link
-                        to={`/channel/${item.id}`}
+                        to={`/video/${item.id}`}
                         className="w-full  relative group cursor-pointer flex gap-3 justify-center"
                         key={index}
                     >

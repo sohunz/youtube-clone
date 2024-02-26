@@ -59,7 +59,7 @@ const App = () => {
                             path="/"
                             element={<Homepage sidebar={sidebar} />}
                         />
-                        <Route path="/channel/:id" element={<Video />} />
+                        <Route path="/video/:id" element={<Video />} />
                         <Route
                             path="/channel/user/:username"
                             element={<Channel />}
