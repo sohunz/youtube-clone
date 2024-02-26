@@ -28,6 +28,7 @@ import YoutubeKids from "./pages/Navbar/YoutubeKids";
 import YoutubePremium from "./pages/Navbar/YoutubePremium";
 import YoutubeStudio from "./pages/Navbar/YoutubeStudio";
 import YoutubeMusic from "./pages/Navbar/YoutubeMusic";
+import EmptyPage from "./components/EmptyPage/EmptyPage";
 
 const App = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -50,9 +51,10 @@ const App = () => {
             <DataContext.Provider value={data}>
                 <SubscribeContext.Provider value={contextValue}>
                     <Navbar setSidebar={setSidebar} sidebar={sidebar} />
-                    <Sidebar sidebar={sidebar} />
+                    <Sidebar setSidebar={setSidebar} sidebar={sidebar} />
                     {/* <Category /> */}
                     <Routes>
+                        <Route path="/empty" element={<EmptyPage />} />
                         <Route
                             path="/"
                             element={<Homepage sidebar={sidebar} />}
@@ -77,7 +79,7 @@ const App = () => {
                             element={<Subscription />}
                         />
                         <Route path="/trending" element={<Trending />} />
-                        <Route path="/watch-later" element={<WatchLater />} />
+                        <Route path="/later" element={<WatchLater />} />
                         <Route path="/channel" element={<YourChannel />} />
                         <Route path="/clip" element={<YourClip />} />
                         <Route path="/video" element={<YourVideo />} />

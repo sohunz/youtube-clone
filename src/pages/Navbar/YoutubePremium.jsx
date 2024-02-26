@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const YoutubePremium = () => {
-    return <div>YoutubePremium</div>;
+    return <EmptyPage />;
 };
 
 export default YoutubePremium;

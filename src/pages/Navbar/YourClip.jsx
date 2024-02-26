@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const YourClip = () => {
-    return <div>YourClip</div>;
+    return <EmptyPage />;
 };
 
 export default YourClip;

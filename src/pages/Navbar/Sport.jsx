@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const Sport = () => {
-    return <div>Sport</div>;
+    return <EmptyPage />;
 };
 
 export default Sport;

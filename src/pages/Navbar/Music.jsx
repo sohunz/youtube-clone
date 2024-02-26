@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const Music = () => {
-    return <div>Music</div>;
+    return <EmptyPage />;
 };
 
 export default Music;

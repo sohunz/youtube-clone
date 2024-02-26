@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const YoutubeKids = () => {
-    return <div>YoutubeKids</div>;
+    return <EmptyPage />;
 };
 
 export default YoutubeKids;

@@ -16,9 +16,15 @@ const Create = ({ closeModal }) => {
                     <p>Upload video</p>
                 </Link>
             </li>
-            <li className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
-                <CiStreamOn size={23} />
-                <p>Go live</p>
+            <li>
+                <Link
+                    to="/empty"
+                    className="flex items-center justify-start p-3 hover:bg-gray-100 rounded-lg cursor-pointer"
+                    onClick={handleUploadClick}
+                >
+                    <CiStreamOn size={23} />
+                    <p>Go live</p>
+                </Link>
             </li>
         </ul>
     );

@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const YoutubeMusic = () => {
-    return <div>YoutubeMusic</div>;
+    return <EmptyPage />;
 };
 
 export default YoutubeMusic;

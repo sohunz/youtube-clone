@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const Setting = () => {
-    return <div>Setting</div>;
+    return <EmptyPage />;
 };
 
 export default Setting;

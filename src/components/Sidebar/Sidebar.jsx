@@ -31,7 +31,7 @@ import { CiTrophy } from "react-icons/ci";
 import data from "../../../data/data";
 import { Link } from "react-router-dom";
 
-const Sidebar = ({ sidebar }) => {
+const Sidebar = ({ sidebar, setSidebar }) => {
     const dataFiltered = data.slice(0, 7);
 
     return (
@@ -54,7 +54,7 @@ const Sidebar = ({ sidebar }) => {
                         sidebar ? "flex flex-col" : "flex flex-col gap-3"
                     }
                 >
-                    <li>
+                    <li onClick={() => setSidebar(false)}>
                         <Link
                             to="/"
                             className={
@@ -67,27 +67,35 @@ const Sidebar = ({ sidebar }) => {
                             <p className={sidebar ? "" : "text-[11px]"}>Home</p>
                         </Link>
                     </li>
-                    <li
-                        className={
-                            sidebar
-                                ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
-                                : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
-                        }
-                    >
-                        <MdOutlineVideoLibrary size={23} />
-                        <p className={sidebar ? "" : "text-[11px]"}>Shorts</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/short"
+                            className={
+                                sidebar
+                                    ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
+                                    : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
+                            }
+                        >
+                            <MdOutlineVideoLibrary size={23} />
+                            <p className={sidebar ? "" : "text-[11px]"}>
+                                Shorts
+                            </p>
+                        </Link>
                     </li>
-                    <li
-                        className={
-                            sidebar
-                                ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
-                                : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
-                        }
-                    >
-                        <MdOutlineSubscriptions size={23} />
-                        <p className={sidebar ? "" : "text-[11px]"}>
-                            Subscripts
-                        </p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/subscription"
+                            className={
+                                sidebar
+                                    ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
+                                    : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
+                            }
+                        >
+                            <MdOutlineSubscriptions size={23} />
+                            <p className={sidebar ? "" : "text-[11px]"}>
+                                Subscripts
+                            </p>
+                        </Link>
                     </li>
                     <li
                         className={
@@ -112,25 +120,50 @@ const Sidebar = ({ sidebar }) => {
                         <p className="font-bold">You</p>
                         <HiOutlineChevronRight size={23} />
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <PiUserSquareLight size={23} />
-                        <p>Your channel</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/channel"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <PiUserSquareLight size={23} />
+                            <p>Your channel</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <LiaHistorySolid size={23} />
-                        <p>History</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/history"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <LiaHistorySolid size={23} />
+                            <p>History</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <AiOutlinePlaySquare size={23} />
-                        <p>Your videos</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/video"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <AiOutlinePlaySquare size={23} />
+                            <p>Your videos</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <MdOutlineWatchLater size={23} />
-                        <p>Watch later</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/later"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <MdOutlineWatchLater size={23} />
+                            <p>Watch later</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <IoCutSharp size={23} />
-                        <p>Your clips</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/clip"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <IoCutSharp size={23} />
+                            <p>Your clips</p>
+                        </Link>
                     </li>
                     <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
                         <MdExpandMore size={23} />
@@ -149,7 +182,7 @@ const Sidebar = ({ sidebar }) => {
                     {dataFiltered.map((item) => {
                         return (
                             <div key={item.id}>
-                                <li>
+                                <li onClick={() => setSidebar(false)}>
                                     <Link
                                         to={`/channel/user/${item.username}`}
                                         className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
@@ -184,21 +217,41 @@ const Sidebar = ({ sidebar }) => {
                         <p className="font-bold">Explore</p>
                         <HiOutlineChevronRight />
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <BsFire size={23} />
-                        <p>Trending</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/trending"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <BsFire size={23} />
+                            <p>Trending</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <PiMusicNoteLight size={23} />
-                        <p>Music</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="music"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <PiMusicNoteLight size={23} />
+                            <p>Music</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <SiYoutubegaming size={23} />
-                        <p>Gaming</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/gaming"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <SiYoutubegaming size={23} />
+                            <p>Gaming</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <GoTrophy size={23} />
-                        <p>Sports</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/sport"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <GoTrophy size={23} />
+                            <p>Sports</p>
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -213,21 +266,41 @@ const Sidebar = ({ sidebar }) => {
                         <p className="font-bold">More From Youtube</p>
                         <HiOutlineChevronRight />
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <FaYoutube color="#FF0000" size={23} />
-                        <p>Youtube Premium</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/premium"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <FaYoutube color="#FF0000" size={23} />
+                            <p>Youtube Premium</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <SiYoutubestudio size={23} color="#FF0000" />
-                        <p>Youtube Studio</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/studio"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <SiYoutubestudio size={23} color="#FF0000" />
+                            <p>Youtube Studio</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <SiYoutubemusic size={23} color="#FF0000" />
-                        <p>Youtube Music</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/youtube-music"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <SiYoutubemusic size={23} color="#FF0000" />
+                            <p>Youtube Music</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <TbBrandYoutubeKids size={23} color="#FF0000" />
-                        <p>Youtube Kids</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/kids"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <TbBrandYoutubeKids size={23} color="#FF0000" />
+                            <p>Youtube Kids</p>
+                        </Link>
                     </li>
                 </ul>
             </div>
@@ -237,21 +310,41 @@ const Sidebar = ({ sidebar }) => {
                 }
             >
                 <ul className="flex flex-col">
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <IoMdSettings size={23} />
-                        <p>Settings</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="setting"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <IoMdSettings size={23} />
+                            <p>Settings</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <RiFlagLine size={23} />
-                        <p>Report history</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/report"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <RiFlagLine size={23} />
+                            <p>Report history</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <IoIosHelpCircleOutline size={23} />
-                        <p>Help</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/help"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <IoIosHelpCircleOutline size={23} />
+                            <p>Help</p>
+                        </Link>
                     </li>
-                    <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                        <MdOutlineFeedback size={23} />
-                        <p>Send feedback</p>
+                    <li onClick={() => setSidebar(false)}>
+                        <Link
+                            to="/feedback"
+                            className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                        >
+                            <MdOutlineFeedback size={23} />
+                            <p>Send feedback</p>
+                        </Link>
                     </li>
                 </ul>
             </div>

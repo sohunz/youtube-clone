@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const Short = () => {
-    return <div>Short</div>;
+    return <EmptyPage />;
 };
 
 export default Short;

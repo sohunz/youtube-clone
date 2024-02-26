@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const YourChannel = () => {
-    return <div>YourChannel</div>;
+    return <EmptyPage />;
 };
 
 export default YourChannel;

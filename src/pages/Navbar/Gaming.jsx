@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const Gaming = () => {
-    return <div>Gaming</div>;
+    return <EmptyPage />;
 };
 
 export default Gaming;

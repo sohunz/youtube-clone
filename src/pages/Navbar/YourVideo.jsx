@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const YourVideo = () => {
-    return <div>YourVideo</div>;
+    return <EmptyPage />;
 };
 
 export default YourVideo;

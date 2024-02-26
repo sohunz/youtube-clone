@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const Trending = () => {
-    return <div>Trending</div>;
+    return <EmptyPage />;
 };
 
 export default Trending;

@@ -1,7 +1,8 @@
 import React from "react";
+import EmptyPage from "../../components/EmptyPage/EmptyPage";
 
 const Help = () => {
-    return <div>Help</div>;
+    return <EmptyPage />;
 };
 
 export default Help;

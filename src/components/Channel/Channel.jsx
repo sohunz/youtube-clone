@@ -10,8 +10,8 @@ import { RiPlayList2Fill } from "react-icons/ri";
 import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { Link } from "react-router-dom";
 import SubscribeContext from "../../context/SubscribeContext";
+import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 
 const Channel = () => {
     const { username } = useParams();
@@ -144,6 +144,7 @@ const Channel = () => {
                             </div>
                             <ul className="flex gap-10 mt-7 text-xl line-clamp-1">
                                 <li
+                                    to="/home"
                                     className={`cursor-pointer ${
                                         activeTab === "Home"
                                             ? "border-b-[3px] border-black pb-2"
@@ -153,6 +154,7 @@ const Channel = () => {
                                 >
                                     Home
                                 </li>
+
                                 <li
                                     className={`cursor-pointer ${
                                         activeTab === "Videos"

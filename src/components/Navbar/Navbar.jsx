@@ -173,7 +173,12 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         >
                             <div className="flex items-center justify-between p-3">
                                 <p className="text-lg">Notifications</p>
-                                <IoSettingsOutline size={23} />
+                                <Link
+                                    to="/setting"
+                                    onClick={() => setNotification(false)}
+                                >
+                                    <IoSettingsOutline size={23} />
+                                </Link>
                             </div>{" "}
                             <hr />
                             <Notification
