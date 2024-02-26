@@ -29,6 +29,7 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { BiBookContent } from "react-icons/bi";
 import { CiTrophy } from "react-icons/ci";
 import data from "../../../data/data";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ sidebar }) => {
     const dataFiltered = data.slice(0, 7);
@@ -53,15 +54,18 @@ const Sidebar = ({ sidebar }) => {
                         sidebar ? "flex flex-col" : "flex flex-col gap-3"
                     }
                 >
-                    <li
-                        className={
-                            sidebar
-                                ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
-                                : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
-                        }
-                    >
-                        <GoHomeFill size={23} />
-                        <p className={sidebar ? "" : "text-[11px]"}>Home</p>
+                    <li>
+                        <Link
+                            to="/"
+                            className={
+                                sidebar
+                                    ? "flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg cursor-pointer"
+                                    : "flex flex-col items-center hover:bg-gray-100 px-1 py-5 rounded-lg cursor-pointer"
+                            }
+                        >
+                            <GoHomeFill size={23} />
+                            <p className={sidebar ? "" : "text-[11px]"}>Home</p>
+                        </Link>
                     </li>
                     <li
                         className={
@@ -145,14 +149,19 @@ const Sidebar = ({ sidebar }) => {
                     {dataFiltered.map((item) => {
                         return (
                             <div key={item.id}>
-                                <li className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg">
-                                    <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
-                                        <img
-                                            src={item.profile}
-                                            className="w-[100%] h-[100%]"
-                                        />
-                                    </div>
-                                    <p>{item.author}</p>
+                                <li>
+                                    <Link
+                                        to={`/channel/user/${item.username}`}
+                                        className="flex items-center gap-5 hover:bg-gray-100 p-2 rounded-lg"
+                                    >
+                                        <div className="bg-gray-500 w-[25px] h-[25px] text-white flex justify-center items-center rounded-full cursor-pointer overflow-hidden">
+                                            <img
+                                                src={item.profile}
+                                                className="w-[100%] h-[100%]"
+                                            />
+                                        </div>
+                                        <p>{item.author}</p>
+                                    </Link>
                                 </li>
                             </div>
                         );
