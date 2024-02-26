@@ -25,14 +25,14 @@ const FeedCard = () => {
                                 className="h-auto"
                             />
                             <p className="bg-black text-white px-2 rounded-md text-[13px] absolute bottom-1 right-[5px]">
-                                3:05
+                                {item.timestamp}
                             </p>
                         </div>
                         <div className="w-full flex gap-3 rounded-lg pt-2 relative">
                             <div className="w-full flex gap-3 rounded-lg">
                                 <div className="w-[45px] h-[45px] min-w-[45px] min-h-[45px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
                                     <img
-                                        src={item.channelProfile}
+                                        src={item.profile}
                                         alt=""
                                         className="w-full h-full object-cover rounded-full"
                                     />

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import DataContext from "../../context/DataContext";
+import { Link } from "react-router-dom";
 
 const CreateVideo = () => {
     const data = useContext(DataContext);
@@ -12,7 +13,7 @@ const CreateVideo = () => {
         upload: "1 min ago",
         author: "",
         thumbnail: "", // Keep track of the thumbnail image path
-        channelProfile: "",
+        profile: "",
         subscribers: "995K",
         description:
             "Welcome to the official YouTube channel. Here you will find news about product launches, tutorials, and other great content. Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today Apple continues to be a global leader in innovation with products like iPhone, iPad, Mac, Apple Watch and Apple Vision Pro. Our six software platforms (iOS, iPadOS, macOS, watchOS, tvOS, and visionOS) provide seamless experiences across Apple devices. Breakthrough services include the App Store, Apple Music, Apple Pay, and iCloud. And Apple keeps pursuing innovation with products like HomePod, Apple Fitness+, and Apple Card. Apple’s more than 160,000 employees are dedicated to making the best products on earth, and to leaving the world better than we found",
@@ -40,7 +41,7 @@ const CreateVideo = () => {
                 ? "thumbnail"
                 : fileType === "banner"
                 ? "banner"
-                : "channelProfile";
+                : "profile";
 
         // Convert the image to a data URL
         const reader = new FileReader();
@@ -66,7 +67,7 @@ const CreateVideo = () => {
             upload: "",
             author: "",
             thumbnail: "",
-            channelProfile: "",
+            profile: "",
             subscribers: "",
             description: "",
             banner: "",
@@ -205,10 +206,8 @@ const CreateVideo = () => {
                                 type="file"
                                 placeholder="Channel Profile"
                                 className="border p-2 rounded-md outline-none pl-3"
-                                name="channelProfile"
-                                onChange={(e) =>
-                                    handleFileChange(e, "channelProfile")
-                                }
+                                name="profile"
+                                onChange={(e) => handleFileChange(e, "profile")}
                             />
                             <p className="pt-2 text-gray-400 text-sm">
                                 Channel Profile
@@ -257,12 +256,13 @@ const CreateVideo = () => {
                             </p>
                         </div>
                     </div>
-                    <button
+                    <Link
+                        to="/"
                         className="w-[150px] mx-auto border py-[8px] mt-5 rounded-md  bg-blue-700 text-white text-lg flex justify-center items-center"
                         onClick={handleSubmit}
                     >
                         Create
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

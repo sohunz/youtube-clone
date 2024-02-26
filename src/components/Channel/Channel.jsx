@@ -49,7 +49,7 @@ const Channel = () => {
                                 </div> */}
                                 <div className="w-[145px] h-[145px] min-w-[145px] min-h-[145px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
                                     <img
-                                        src={item.channelProfile}
+                                        src={item.profile}
                                         alt=""
                                         className="w-full h-full object-cover rounded-full"
                                     />

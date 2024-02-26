@@ -3,12 +3,11 @@ const data = [
         id: 1,
         title: "The new MacBook Pro | Apple",
         views: "39M",
-        profile:
-            "https://yt3.ggpht.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "2:35",
         upload: "3 months ago",
         author: "Apple",
         thumbnail: "https://i.ytimg.com/vi/0pg_Y41waaE/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "18.8M",
         subscribed: false,
@@ -26,13 +25,12 @@ const data = [
         id: 2,
         title: "Samsung Galaxy S24 Ultra vs iPhone 15 Pro Max - Which Should You Buy?",
         views: "282K",
-        profile:
-            "https://yt3.ggpht.com/LdXq5jr6erm75Jyuc4nmvv3Mw26-fleabK9PwraePHQHQ8sOgdIuzSFnMRhTgKNoEp5mDOqY_g=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "12:25",
         upload: "2 years ago",
         author: "The Tech Chap",
         thumbnail:
             "https://i.ytimg.com/vi/ChQl1u6YU7Q/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBcUlXm0C9hCAS0sjFDpOmAtUtxrA",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/LdXq5jr6erm75Jyuc4nmvv3Mw26-fleabK9PwraePHQHQ8sOgdIuzSFnMRhTgKNoEp5mDOqY_g=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "1.44M",
         videos: "1K",
@@ -49,12 +47,11 @@ const data = [
         id: 3,
         title: "Samsung S24 Ultra vs iPhone 15 Pro Max Camera Battle!",
         views: "5.1M",
-        profile:
-            "https://yt3.ggpht.com/enyLBm1Sy8mVRXJJLWHT2z64nqxJGt2g61A9xnxpUjO2YAUovHaY_JT3rnAg0j6Qij9iaHQlAg=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "24:55",
         upload: "3 weeks ago",
         author: "Mrwhosetheboss",
         thumbnail: "https://i.ytimg.com/vi/btmeie5A4yE/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/enyLBm1Sy8mVRXJJLWHT2z64nqxJGt2g61A9xnxpUjO2YAUovHaY_JT3rnAg0j6Qij9iaHQlAg=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "18M",
         videos: "1.6K",
@@ -72,12 +69,11 @@ const data = [
         id: 4,
         title: "React Native vs Flutter - I built the same chat app with both",
         views: "1.8M",
-        profile:
-            "https://yt3.ggpht.com/ytc/AIf8zZTUVa5AeFd3m5-4fdY2hEaKof3Byp8VruZ0f0FNEA=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "1:35",
         upload: "2 years ago ",
         author: "Fireship",
         thumbnail: "https://i.ytimg.com/vi/X8ipUgXH6jw/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/ytc/AIf8zZTUVa5AeFd3m5-4fdY2hEaKof3Byp8VruZ0f0FNEA=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "2.82M",
         videos: "607",
@@ -94,12 +90,11 @@ const data = [
         id: 5,
         title: "AI Generated Videos Just Changed Forever",
         views: "3.3M",
-        profile:
-            "https://yt3.ggpht.com/lkH37D712tiyphnu0Id0D5MwwQ7IRuwgQLVD05iMXlDWO-kDHut3uI4MgIEAQ9StK0qOST7fiA=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "13:05",
         upload: "1 day ago ",
         author: "Marques Brownlee",
         thumbnail: "https://i.ytimg.com/vi/NXpdyAWLDas/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/lkH37D712tiyphnu0Id0D5MwwQ7IRuwgQLVD05iMXlDWO-kDHut3uI4MgIEAQ9StK0qOST7fiA=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "18.5M",
         videos: "1.6K",
@@ -116,12 +111,11 @@ const data = [
         id: 6,
         title: "Actually, ChatGPT is INCREDIBLY Useful (15 Surprising Examples)",
         views: "98K",
-        profile:
-            "https://yt3.ggpht.com/ytc/AIf8zZRNQoDZDUq0J6anaOnhN65_Ht7YnVgRKwL1xDMnXA=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "17:05",
         upload: " 8 days ago",
         author: "ThioJoe",
         thumbnail: "https://i.ytimg.com/vi/zIWqTJu9HaA/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/ytc/AIf8zZRNQoDZDUq0J6anaOnhN65_Ht7YnVgRKwL1xDMnXA=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "3.05M",
         videos: "880",
@@ -139,12 +133,11 @@ const data = [
         id: 7,
         title: "Ford Mustang SHELBY GT500 Review: The MADDEST Muscle Car! | 4K",
         views: "1.4M",
-        profile:
-            "https://yt3.ggpht.com/D2rVY0GIhAZZ_QfIupATCauaxNC45N3JuDY6pqrI75VByFEj3Ey62xdpGTF-OOsGr7kDGlorlg=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "16:53",
         upload: "2 years ago",
         author: "AutoTrader",
         thumbnail: "https://i.ytimg.com/vi/D3RO2xNKS6s/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/D2rVY0GIhAZZ_QfIupATCauaxNC45N3JuDY6pqrI75VByFEj3Ey62xdpGTF-OOsGr7kDGlorlg=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "1.09M",
         videos: "1.3K",
@@ -162,12 +155,11 @@ const data = [
         id: 8,
         title: "Samsung Galaxy S24 Ultra TIPS, TRICKS & HIDDEN FEATURES!!",
         views: "251K",
-        profile:
-            "https://yt3.ggpht.com/pWEwr8e9zHy1ouYGkp5jW1LDI9lwiL88oXBp-Vhu2Y2YFUw3OrhIKqLjajUnXJAg3vcYiE_rWw=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "13:45",
         upload: "2 weeks ago ",
         author: "Hayls World",
         thumbnail: "https://i.ytimg.com/vi/emrLEDH52e0/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/pWEwr8e9zHy1ouYGkp5jW1LDI9lwiL88oXBp-Vhu2Y2YFUw3OrhIKqLjajUnXJAg3vcYiE_rWw=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "1.83M",
         videos: "361",
@@ -183,13 +175,12 @@ const data = [
     {
         id: 9,
         title: "The GOOD And The BAD of Living with Old JDM Cars",
+        timestamp: "42:35",
         views: "87K",
-        profile:
-            "https://yt3.ggpht.com/ytc/AIf8zZSXy3u7ymh_OjXNCnK70m5ltBgI0z2wsyBlacnk=s88-c-k-c0x00ffffff-no-rj",
         upload: "1 day ago",
         author: "NIGHTRIDE",
         thumbnail: "https://i.ytimg.com/vi/ApYl1EF5dNs/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/ytc/AIf8zZSXy3u7ymh_OjXNCnK70m5ltBgI0z2wsyBlacnk=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "865K",
         videos: "444",
@@ -206,13 +197,12 @@ const data = [
         id: 10,
         title: "SOLO Car Tent Camping in the RAIN [ Relaxing, cosy rain shelter, ASMR ]",
         views: "25K",
-        profile:
-            "https://yt3.ggpht.com/ytc/AIf8zZTUy8vpaGO6DstYfJ-TICTuV6xqHHA4ulZ-NghdyA=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "30:55",
         upload: "1 day ago",
         author: "Go4x4",
         thumbnail:
             "https://i.ytimg.com/vi/-wm71pIfT-s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB8wRVsVgyynoUvyoEmNqRIVIsaCw",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/ytc/AIf8zZTUy8vpaGO6DstYfJ-TICTuV6xqHHA4ulZ-NghdyA=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "1.4M",
         videos: "141",
@@ -229,12 +219,11 @@ const data = [
         id: 11,
         title: "Create YouTube Clone Using React JS | Build Complete Website Like YouTube In React JS 2024",
         views: "12K",
-        profile:
-            "https://yt3.ggpht.com/dZrWJVS5N3R5R-qkneimoPXYLBC-apFge8e8q94jrMur7bLPc7PaOO1fiwPJrVfsando6fP2=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "59:12",
         upload: "4 days ago",
         author: "GreatStack",
         thumbnail: "https://i.ytimg.com/vi/Zb1zVeXLUf8/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/dZrWJVS5N3R5R-qkneimoPXYLBC-apFge8e8q94jrMur7bLPc7PaOO1fiwPJrVfsando6fP2=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "966K",
         videos: "611",
@@ -251,12 +240,11 @@ const data = [
         id: 12,
         title: "Samsung Galaxy S24 Unboxing - ASMR",
         views: "350K",
-        profile:
-            "https://yt3.ggpht.com/ytc/AIf8zZRM6z-pm8we7vob2akBnO91hwVHXpT4ViW-0DSBGg=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "6:04",
         upload: "13 hours ago",
         author: "Dr Debox",
         thumbnail: "https://i.ytimg.com/vi/G_S2fPqGM_8/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/ytc/AIf8zZRM6z-pm8we7vob2akBnO91hwVHXpT4ViW-0DSBGg=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "902K",
         videos: "214",
@@ -274,12 +262,11 @@ const data = [
         id: 13,
         title: "Trance",
         views: "16M",
-        profile:
-            "https://yt3.ggpht.com/ZAUGohPa0GCQWeGeclI_lCU-l_bSpf5wYARgbBZ6hkyt_mVPp_nGzTwW9LTosJjM6lY-eiy5Fg=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "3:02",
         upload: "1 year ago",
         author: "Metro Boomin",
         thumbnail: "https://i.ytimg.com/vi/gHb6AEwNFBU/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/ZAUGohPa0GCQWeGeclI_lCU-l_bSpf5wYARgbBZ6hkyt_mVPp_nGzTwW9LTosJjM6lY-eiy5Fg=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "2.6M",
         videos: "116",
@@ -296,12 +283,11 @@ const data = [
         id: 14,
         title: "Freshhkiicks Nismo R35 GTR [4K]",
         views: "2.6M",
-        profile:
-            "https://yt3.ggpht.com/iEIqg8ysU7x7hUHuls-7U5SU7oyWkHEUR4FdzvSmg4PRTFaCrDOCp8j0X0Qk6WOb3JWJwKg-_w=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "3:25",
         upload: "2 years ago",
         author: "Woyshnis Media",
         thumbnail: "https://i.ytimg.com/vi/Jvr0U2ZInoE/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/iEIqg8ysU7x7hUHuls-7U5SU7oyWkHEUR4FdzvSmg4PRTFaCrDOCp8j0X0Qk6WOb3JWJwKg-_w=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "551K",
         videos: "222",
@@ -317,13 +303,12 @@ const data = [
     {
         id: 15,
         title: "Hello Apple Vision Pro",
+        timestamp: "1:25",
         views: "34M",
-        profile:
-            "https://yt3.ggpht.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s88-c-k-c0x00ffffff-no-rj",
         upload: "2 weeks ago ",
         author: "Apple",
         thumbnail: "https://i.ytimg.com/vi/IY4x85zqoJM/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/05lhMeAH6tZrPIUsp2yHNz3DwzhKbDUQcxcY0_qeXVyZttR_pktBzw0FcLUSR6D4fVqsEgL3ZO0=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "18.8M",
         videos: 185,
@@ -340,12 +325,11 @@ const data = [
         id: 16,
         title: "Introducing Windows 11",
         views: "11M",
-        profile:
-            "https://yt3.ggpht.com/iKXHVtR-fLwbz17z4ikGr5nUG37KhCHMqBsqMm8y5K3fvqFqhkMS_7lN61frBDAU3k2qnqWu=s88-c-k-c0x00ffffff-no-rj",
+        timestamp: "1:50",
         upload: "2 years ago",
         author: "Windows",
         thumbnail: "https://i.ytimg.com/vi/Uh9643c2P6k/maxresdefault.jpg",
-        channelProfile:
+        profile:
             "https://yt3.googleusercontent.com/iKXHVtR-fLwbz17z4ikGr5nUG37KhCHMqBsqMm8y5K3fvqFqhkMS_7lN61frBDAU3k2qnqWu=s176-c-k-c0x00ffffff-no-rj",
         subscribers: "1.11M",
         videos: "94",
