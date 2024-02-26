@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Home/Homepage";
@@ -52,7 +52,6 @@ const App = () => {
                 <SubscribeContext.Provider value={contextValue}>
                     <Navbar setSidebar={setSidebar} sidebar={sidebar} />
                     <Sidebar setSidebar={setSidebar} sidebar={sidebar} />
-                    {/* <Category /> */}
                     <Routes>
                         <Route path="/empty" element={<EmptyPage />} />
                         <Route

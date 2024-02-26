@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import DataContext from "../../context/DataContext";
 import { PiDot } from "react-icons/pi";
@@ -11,7 +11,7 @@ import { PiDotsThreeVerticalBold } from "react-icons/pi";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import SubscribeContext from "../../context/SubscribeContext";
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Channel = () => {
     const { username } = useParams();
@@ -40,13 +40,6 @@ const Channel = () => {
                                 className="w-full h-full object-cover rounded-xl"
                             />
                             <div className="lg:pt-7 md:pt-6 sm:pt-5 pt-3 flex gap-7">
-                                {/* <div className="min-w-[160px] max-h-[160px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
-                                    <img
-                                        src={item.channelProfile}
-                                        alt=""
-                                        className="min-w-[160px] max-h-[160px] "
-                                    />
-                                </div> */}
                                 <div className="w-[145px] h-[145px] min-w-[145px] min-h-[145px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
                                     <img
                                         src={item.profile}
@@ -93,30 +86,6 @@ const Channel = () => {
                                         </span>
                                         &nbsp; and {item.linkCount} more link
                                     </p>
-                                    {/* <div
-                                        className={
-                                            subscribe
-                                                ? "flex items-center gap-2 bg-gray-200 rounded-full py-2 px-4 border-0 cursor-pointer w-[160px] h-[40px]"
-                                                : "flex items-center gap-3 bg-black text-white rounded-full px-4 border-0 cursor-pointer w-[120px] justify-center py-[9px] h-[40px] "
-                                        }
-                                        onClick={() => {
-                                            setSubscribe(!subscribe);
-                                        }}
-                                    >
-                                        {subscribe ? (
-                                            <IoMdNotificationsOutline
-                                                size={25}
-                                            />
-                                        ) : (
-                                            ""
-                                        )}
-                                        {subscribe ? (
-                                            <p>Subscribed</p>
-                                        ) : (
-                                            <p>Subscribe</p>
-                                        )}
-                                        {subscribe ? <BsChevronDown /> : ""}
-                                    </div> */}
 
                                     <div
                                         className={

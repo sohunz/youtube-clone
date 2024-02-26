@@ -11,8 +11,6 @@ import { TbUserShield } from "react-icons/tb";
 import { CiGlobe } from "react-icons/ci";
 import { FaRegKeyboard } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
-import { MdOutlineFeedback } from "react-icons/md";
-import { IoIosHelpCircleOutline } from "react-icons/io";
 import "../../components/Sidebar/Scrollbar.css";
 
 const UserProfile = () => {
@@ -88,19 +86,6 @@ const UserProfile = () => {
                     </li>
                 </ul>
             </div>
-            {/* <hr />
-            <div className="py-2 px-2">
-                <ul>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
-                        <IoIosHelpCircleOutline size={23} />
-                        <p>Help</p>
-                    </li>
-                    <li className="flex items-center gap-4 py-2 hover:bg-gray-100 px-3 rounded-md">
-                        <MdOutlineFeedback size={23} />
-                        <p>Send feedback</p>
-                    </li>
-                </ul>
-            </div> */}
         </div>
     );
 };

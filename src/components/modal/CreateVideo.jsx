@@ -9,10 +9,9 @@ const CreateVideo = () => {
         id: Math.random(),
         title: "",
         views: "590K",
-        // profile: "", // Keep track of the profile image path
         upload: "1 min ago",
         author: "",
-        thumbnail: "", // Keep track of the thumbnail image path
+        thumbnail: "",
         profile: "",
         subscribers: "995K",
         description:
@@ -25,7 +24,7 @@ const CreateVideo = () => {
         videos: "225",
     });
 
-    const [imagePaths, setImagePaths] = useState([]); // Array to store image paths
+    const [imagePaths, setImagePaths] = useState([]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -35,7 +34,6 @@ const CreateVideo = () => {
     const handleFileChange = (e, fileType) => {
         const file = e.target.files[0];
 
-        // Determine whether it's a profile or thumbnail
         const fieldName =
             fileType === "thumbnail"
                 ? "thumbnail"
@@ -43,15 +41,12 @@ const CreateVideo = () => {
                 ? "banner"
                 : "profile";
 
-        // Convert the image to a data URL
         const reader = new FileReader();
         reader.onload = (event) => {
             const dataUrl = event.target.result;
 
-            // Store the data URL in the array
             setImagePaths([...imagePaths, dataUrl]);
 
-            // Set the corresponding field in the formData
             setFormData({ ...formData, [fieldName]: dataUrl });
         };
         reader.readAsDataURL(file);
@@ -229,18 +224,6 @@ const CreateVideo = () => {
                     </div>
 
                     <div className="flex flex-row gap-2 justify-between">
-                        {/* <div>
-                            <input
-                                type="file"
-                                placeholder="Profile"
-                                className="border p-2 rounded-md outline-none pl-3"
-                                name="profile"
-                                onChange={(e) => handleFileChange(e, "profile")}
-                            />
-                            <p className="pt-2 text-gray-400 text-sm">
-                                Small Profile
-                            </p>
-                        </div> */}
                         <div>
                             <input
                                 type="file"

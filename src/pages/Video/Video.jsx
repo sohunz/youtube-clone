@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
 import { PiShareFatLight } from "react-icons/pi";
