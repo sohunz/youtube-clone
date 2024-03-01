@@ -30,7 +30,7 @@ const FeedCard = () => {
                         </div>
                         <div className="w-full flex gap-3 rounded-lg pt-2 relative">
                             <div className="w-full flex gap-3 rounded-lg">
-                                <div className="w-[45px] h-[45px] min-w-[45px] min-h-[45px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
+                                <div className="w-[45px] h-[45px] min-w-[45px] min-h-[45px] rounded-full lg:flex md:hidden sm:flex flex overflow-hidden">
                                     <img
                                         src={item.profile}
                                         alt=""

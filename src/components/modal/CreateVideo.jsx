@@ -75,9 +75,9 @@ const CreateVideo = () => {
     };
 
     return (
-        <div className="w-full h-[87vh] bg-gray-100">
-            <div className="max-w-[1440px] mx-auto mt-24 flex justify-center">
-                <div className="w-[50%] mt-12 border flex flex-col justify-center p-10 gap-3 rounded-2xl bg-white">
+        <div className="w-full pb-10 bg-gray-100 p-3">
+            <div className="max-w-[1440px] mx-auto mt-5 flex justify-center">
+                <div className="w-[600px] min-w-[400px] mt-12 border flex flex-col justify-center p-10 gap-3 rounded-2xl bg-white">
                     <input
                         type="text"
                         placeholder="Id"
@@ -151,7 +151,7 @@ const CreateVideo = () => {
                         onChange={handleInputChange}
                     />
 
-                    <div className="grid grid-cols-2 gap-5 mb-3">
+                    <div className="grid grid-cols-1 gap-5 mb-3">
                         <div className="grid">
                             <input
                                 type="text"
@@ -195,7 +195,7 @@ const CreateVideo = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-row justify-between mt-10 mb-3">
+                    <div className="grid grid-cols-1 mt-10 mb-3">
                         <div>
                             <input
                                 type="file"

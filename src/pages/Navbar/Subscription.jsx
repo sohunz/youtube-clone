@@ -12,15 +12,15 @@ const Subscription = () => {
     const { subscribe, handleSubscribeToggle } = useContext(SubscribeContext);
 
     return (
-        <div className="w-full mt-24">
+        <div className="mt-24 lg:ml-[70px] md:ml-[70px] sm:ml-0 ml-0 px-3">
             {data.map((item) => {
                 return (
                     <Link
                         to={`/channel/user/${item.username}`}
-                        className="max-w-[900px] mx-auto flex justify-between items-center gap-20 mb-6"
+                        className="max-w-[900px] mx-auto flex justify-between items-center lg:gap-20 md:gap-20 sm:gap-5 gap-5 mb-6"
                         key={item.id}
                     >
-                        <div className="w-[150px] h-[150px] min-w-[150px] min-h-[150px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden">
+                        <div className="lg:w-[150px] md:w-[150px] sm:w-[50px] w-[50px]  lg:h-[150px] md:h-[150px] sm:h-[50px] h-[50px] lg:min-w-[150px] md:min-w-[150px] sm:min-w-[50px] min-w-[50px] lg:min-h-[150px] md:min-h-[150px] sm:min-h-[50px] min-h-[50px] rounded-full flex overflow-hidden">
                             <img
                                 src={item.profile}
                                 className="w-full h-full object-cover rounded-full"
@@ -29,16 +29,18 @@ const Subscription = () => {
                         <div className="w-full flex flex-row justify-between items-center gap-10">
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <p className="font-bold text-2xl lg:pt-0 md:pt-0 sm:pt-2 pt-2">
+                                    <p className="lg:font-bold md:font-bold sm:font-normal font-medium lg:text-2xl md:text-2xl sm:text-xl text-lg lg:pt-0 md:pt-0 sm:pt-2 pt-2 line-clamp-1">
                                         {item.author}
                                     </p>
-                                    {item.verified ? (
-                                        <VscVerifiedFilled color="gray" />
-                                    ) : (
-                                        ""
-                                    )}
+                                    <span className="lg:block md:block sm:hidden hidden">
+                                        {item.verified ? (
+                                            <VscVerifiedFilled color="gray" />
+                                        ) : (
+                                            ""
+                                        )}
+                                    </span>
                                 </div>
-                                <div className="flex flex-wrap items-center text-gray-600 pt-2 ">
+                                <div className="lg:flex md:flex sm:flex hidden flex-wrap items-center text-gray-600 pt-2 ">
                                     <p className="text-[13px]">
                                         @{item.username}
                                     </p>
@@ -47,7 +49,7 @@ const Subscription = () => {
                                         {item.subscribers} subscribers
                                     </p>
                                 </div>
-                                <div>
+                                <div className="lg:block md:block sm:block hidden">
                                     <p className="text-[13px] text-gray-600 line-clamp-3">
                                         {item.description}
                                     </p>

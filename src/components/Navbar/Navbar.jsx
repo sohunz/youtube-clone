@@ -164,7 +164,7 @@ const Navbar = ({ setSidebar, sidebar }) => {
                         <div
                             className={
                                 notification
-                                    ? "absolute bg-white min-w-[500px]  border rounded-xl p-1 right-[0px] top-[46px] z-40"
+                                    ? "absolute bg-white lg:min-w-[500px] md:min-w-[500px] sm:min-w-[500px] min-w-[350px]    border rounded-xl p-1 lg:right-[0px] md:right-[0] sm:right-[-20px] right-[-50px] top-[46px] z-40"
                                     : "hidden"
                             }
                         >

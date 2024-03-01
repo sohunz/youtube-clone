@@ -13,7 +13,7 @@ const Description = () => {
             {dataFiltered.map((item, index) => {
                 return (
                     <div
-                        className="mr-5 mt-5 rounded-lg p-4 bg-gray-100"
+                        className=" mt-5 lg:mb-0 md:mb-0 sm:mb-0 mb-5 rounded-lg p-4 bg-gray-100"
                         key={index}
                     >
                         <div className="w-[70%] font-[11px]">

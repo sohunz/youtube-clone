@@ -27,11 +27,11 @@ const Channel = () => {
 
     return (
         <div className=" w-full mt-[65px]">
-            <div className="max-w-[1350px] mx-auto px-16 pl-28">
+            <div className="lg:max-w-[1350px] md:w-full sm:w-full w-full  mx-auto lg:px-16 md:px-16 sm:px-5 px-5 lg:pl-28 md:pl-28 sm:pl-5 pl-5">
                 {dataFiltered.map((item, index) => {
                     return (
                         <div
-                            className="w-full lg:h-[200px] md:h-[150px] sm:h-[140px] h-[100px]"
+                            className="w-full lg:h-[200px] md:h-[150px] sm:h-[140px] h-[100px] "
                             key={index}
                         >
                             <img
@@ -50,7 +50,7 @@ const Channel = () => {
                                 <div className="inline-flex flex-col gap-2">
                                     <div className="w-full">
                                         <div className="flex items-center gap-2">
-                                            <p className="font-bold text-4xl lg:pt-0 md:pt-0 sm:pt-2 pt-2">
+                                            <p className="font-bold lg:text-4xl md:text-4xl sm:text-3xl text-2xl lg:pt-0 md:pt-0 sm:pt-2 pt-2">
                                                 {item.author}
                                             </p>
                                             {item.verified ? (
@@ -183,10 +183,10 @@ const Channel = () => {
                                 return (
                                     <Link
                                         to={`/video/${item.id}`}
-                                        className="w-full  relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5"
+                                        className="w-full relative group cursor-pointer mt-7 flex lg:gap-5 md:gap-3 sm:gap-3 gap-3 pb-5"
                                         key={item.id}
                                     >
-                                        <div className="max-w-[300px] h-auto overflow-hidden rounded-xl relative">
+                                        <div className="w-[300px] lg:min-w-[300px] md:min-w-[270px] sm:min-w-[200px] min-w-[200px] h-auto overflow-hidden rounded-xl relative">
                                             <img
                                                 src={item.thumbnail}
                                                 alt=""
@@ -210,11 +210,11 @@ const Channel = () => {
                                                 3:05
                                             </p>
                                         </div>
-                                        <div className="w-full flex gap-3 rounded-lg pt-2 ">
+                                        <div className=" flex gap-3 rounded-lg pt-2 ">
                                             <div className="w-full flex gap-3 rounded-lg">
                                                 <div className="flex flex-col gap-3 lg:w-[50%] md:w-[70%] sm:w-100 w-100">
                                                     <p
-                                                        className="lg:line-clamp-2 md:line-clamp-2 sm:line-clamp-2 line-clamp-2 pb-1 text-xl pr-1 "
+                                                        className="lg:line-clamp-2 md:line-clamp-2 sm:line-clamp-1 line-clamp-1 pb-1 text-xl pr-1 "
                                                         style={{
                                                             fontWeight: "500",
                                                         }}
@@ -246,12 +246,6 @@ const Channel = () => {
                                                     </p>
                                                 </div>
                                             </div>
-                                            <p>
-                                                <PiDotsThreeVerticalBold
-                                                    size={23}
-                                                    className="cursor-pointer"
-                                                />
-                                            </p>
                                         </div>
                                     </Link>
                                 );

@@ -49,7 +49,7 @@ const data = [
         views: "5.1M",
         timestamp: "24:55",
         upload: "3 weeks ago",
-        author: "Mrwhosetheboss",
+        author: "Mrwhotheboss",
         thumbnail: "https://i.ytimg.com/vi/btmeie5A4yE/maxresdefault.jpg",
         profile:
             "https://yt3.googleusercontent.com/enyLBm1Sy8mVRXJJLWHT2z64nqxJGt2g61A9xnxpUjO2YAUovHaY_JT3rnAg0j6Qij9iaHQlAg=s176-c-k-c0x00ffffff-no-rj",
@@ -60,7 +60,7 @@ const data = [
         banner: "https://yt3.googleusercontent.com/8gFNuKwH5Okrw1yldrDSyuEihPbp3J-zGzxYPbvl2SyJLa4JBmJzvtaSeacrvIgNGCymYPJG=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "instagram.com/mrwhosetheboss",
         linkCount: "1",
-        username: "Mrwhosetheboss",
+        username: "Mrwhotheboss",
         verified: true,
         src: "https://www.youtube.com/embed/btmeie5A4yE?autoplay=1",
     },

@@ -24,40 +24,42 @@ const Video = () => {
     const { handleSubscribeToggle, subscribe } = useContext(SubscribeContext);
 
     return (
-        <div className="max-w-[1410px] mx-auto mt-[70px] grid grid-cols-12">
+        <div className="max-w-[1380px] mt-[70px] lg:ml-[70px] md:ml-[70px] sm:ml-3 ml-3 lg:grid md:flex sm:flex flex-col grid-cols-12 gap-3 mx-auto mr-3">
             {dataFiltered.map((item, index) => {
                 return (
                     <div className="col-span-8" key={index}>
-                        <div className="w-[920px] h-[525px] flex justify-center items-center overflow-hidden rounded-2xl">
+                        <div className="max-w-[920px] flex justify-center items-center overflow-hidden rounded-2xl">
                             <iframe
                                 width="914"
-                                height="520"
+                                // height="520"
                                 src={item.src}
                                 title={item.title}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
-                                className="rounded-2xl "
+                                className="rounded-2xl lg:h-[520px] md:h-[520px] sm:h-[400px] h-[250px] "
                             ></iframe>
                         </div>
                         <div className="mt-5">
-                            <p className="text-[20px] font-bold">
+                            <p className="text-[20px] font-bold line-clamp-1">
                                 {item.title}
                             </p>
-                            <div className="flex justify-between mt-3">
-                                <div className="w-full flex gap-3 rounded-lg">
+                            <div className="flex lg:flex-row md:flex-row sm:flex-row flex-col justify-between mt-3 ">
+                                <div className=" flex gap-3 rounded-lg">
                                     <Link
                                         to={`/channel/user/${item.username}`}
-                                        className="w-[45px] h-[45px] min-w-[45px] min-h-[45px] rounded-full lg:flex md:flex sm:hidden hidden overflow-hidden"
+                                        className="w-[45px] h-[45px] min-w-[45px] min-h-[45px] rounded-full lg:flex md:flex sm:hidden flex overflow-hidden"
                                     >
                                         <img
                                             src={item.profile}
                                             className="w-full h-full object-cover rounded-full"
                                         />
                                     </Link>
-                                    <div className="flex gap-6 items-center">
-                                        <div>
+                                    <div className="w-full flex gap-6 items-center justify-between lg:mb-0 md:mb-0 sm:mb-0 mb-5">
+                                        <div className="a line-clamp-1">
                                             <span className="flex gap-2 items-center">
-                                                <p>{item.author}</p>
+                                                <p className="line-clamp-1">
+                                                    {item.author}
+                                                </p>
                                                 {item.verified ? (
                                                     <VscVerifiedFilled color="gray" />
                                                 ) : (
@@ -92,8 +94,8 @@ const Video = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex items-center">
-                                    <ul className="flex gap-3">
+                                <div className="w-full lg:justify-end md:justify-end sm:justify-end justify-start min-w-100px] flex items-center">
+                                    <ul className="flex gap-2">
                                         <li className="flex items-center bg-gray-100 rounded-full overflow-hidden">
                                             <span className="w-full h-full flex items-center gap-2 hover:bg-gray-200 px-3 cursor-pointer">
                                                 <BiLike size={23} />
@@ -108,11 +110,11 @@ const Video = () => {
                                             <PiShareFatLight size={23} />
                                             <p>share</p>
                                         </li>
-                                        <li className="flex items-center gap-2 bg-gray-100 py-2 px-4 rounded-full hover:bg-gray-200 cursor-pointer">
+                                        {/* <li className="flex items-center gap-2 bg-gray-100 py-2 px-4 rounded-full hover:bg-gray-200 cursor-pointer">
                                             <LiaDownloadSolid size={23} />
                                             <p>download</p>
-                                        </li>
-                                        <li className="bg-gray-100 p-2 mr-5 rounded-full hover:bg-gray-200 cursor-pointer">
+                                        </li> */}
+                                        <li className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 cursor-pointer">
                                             <RiMoreLine size={22} />
                                         </li>
                                     </ul>
