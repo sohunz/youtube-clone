@@ -54,8 +54,8 @@ const Video = () => {
                                             className="w-full h-full object-cover rounded-full"
                                         />
                                     </Link>
-                                    <div className="w-full flex gap-6 items-center justify-between lg:mb-0 md:mb-0 sm:mb-0 mb-5">
-                                        <div className="a line-clamp-1">
+                                    <div className="lg:w-[245px] md:w-[245px] sm:w-full w-full flex gap-6 items-center justify-between lg:mb-0 md:mb-0 sm:mb-0 mb-5">
+                                        <div className="lg:line-clamp-2 md:line-clamp-1 sm:line-clamp-1">
                                             <span className="flex gap-2 items-center">
                                                 <p className="line-clamp-1">
                                                     {item.author}
@@ -66,7 +66,7 @@ const Video = () => {
                                                     ""
                                                 )}
                                             </span>
-                                            <p className="text-sm text-gray-700">
+                                            <p className="text-sm text-gray-700 lg:line-clamp-2 md:line-clamp-1 sm:line-clamp-1 line-clamp-1">
                                                 {item.subscribers} subscribers
                                             </p>
                                         </div>

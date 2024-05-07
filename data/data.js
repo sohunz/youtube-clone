@@ -14,7 +14,7 @@ const data = [
         videos: 185,
         description:
             "Welcome to the official Apple YouTube channel. Here you will find news about product launches, tutorials, and other great content. Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today Apple continues to be a global leader in innovation with products like iPhone, iPad, Mac, Apple Watch and Apple Vision Pro. Our six software platforms (iOS, iPadOS, macOS, watchOS, tvOS, and visionOS) provide seamless experiences across Apple devices. Breakthrough services include the App Store, Apple Music, Apple Pay, and iCloud. And Apple keeps pursuing innovation with products like HomePod, Apple Fitness+, and Apple Card. Apple’s more than 160,000 employees are dedicated to making the best products on earth, and to leaving the world better than we found it. ",
-        banner: "https://yt3.googleusercontent.com/-Ohr9kv5aYR0Gb871_h-kj4tnMy8AQUeOey_ZNazjApndlU_L11Cb67Bh5vEqRng22lv5UggwA=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+        banner: "https://yt3.googleusercontent.com/zMWCvR0RqnaTqND6miW9KEXEQqldP9AJFhzAjdZDPGcRUJm05Q02jYQYi-OZOjv5eE9RDxnx=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "apple.com",
         linkCount: 1,
         username: "Apple",
@@ -57,7 +57,7 @@ const data = [
         videos: "1.6K",
         description:
             "Let's become the Greatest Tech Community on the Planet 🌍 I'm Arun Maini, I'm a 27 year old Economics graduate whose life's passion is Technology, and I'm on a mission to make the most FUN and USEFUL Tech videos on the Planet! 🙏",
-        banner: "https://yt3.googleusercontent.com/8gFNuKwH5Okrw1yldrDSyuEihPbp3J-zGzxYPbvl2SyJLa4JBmJzvtaSeacrvIgNGCymYPJG=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+        banner: "https://yt3.googleusercontent.com/nrVOhRAca6jnujjvmXuuO5oifqKE9-8WR5nj3_rHuuV98p89PnbKUKR0i-i68MsQg7Lz96DAkp4=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "instagram.com/mrwhosetheboss",
         linkCount: "1",
         username: "Mrwhotheboss",
@@ -143,7 +143,7 @@ const data = [
         videos: "1.3K",
         description:
             "Auto Trader is the UK’s largest automotive marketplace for buying and selling new and used cars, and our YouTube channel will help make finding your next vehicle easier than ever.",
-        banner: "https://yt3.googleusercontent.com/_Cmh8OzgE55B5yj004MLA9eTn2QB31di3KiGhOIDCJFQiWAERbCX8nNecdfeKmc9uHlJSb2TPA=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+        banner: "https://yt3.googleusercontent.com/ObQiyP0pUxiKRJXW7stGMB9sC4aVWAyCeXawAxX8OXHAqXiJYljkAh7B68AoshMmJcTCZdZ6Uw=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "linktr.ee/AutoTraderTV",
         linkCount: "4",
         username: "AutoTraderTV",
@@ -229,7 +229,7 @@ const data = [
         videos: "611",
         description:
             "Welcome to “GreatStack” (formerly Easy Tutorials). My name is Avinash and I'm a Software Developer with several years of experience in web development. I like to teach aspiring web developers at 'GreatStack' to learn to code and get their dream job.",
-        banner: "https://yt3.googleusercontent.com/0QSVtVUVjRPWKNSYRY3i7vwd0pe5HhKv8VQjrLOCFBSXglbsMbgx86Nz6k9NnfJrXYM9jQAVcQ=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+        banner: "https://yt3.googleusercontent.com/KG5NSHxOxtcTecGWEHn9AZn9O1QuBUQHMTWsREGwicJh11adyiMehulOnRzO_dZvSvKwMDde=w854-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "linktr.ee/iamavinashkr",
         linkCount: "1",
         username: "GreatStackDev",
@@ -272,7 +272,7 @@ const data = [
         videos: "116",
         description:
             "The official YouTube Channel for Metro Boomin, critically-acclaimed record producer, record executive, songwriter, and DJ.",
-        banner: "https://yt3.googleusercontent.com/uImxmeXMZ8nSRjsXsUP79m3iTTQEToQl23c9zoJyPUCCZ3lkuUcn9DryaiMMxZlxzBm04S1ycA=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+        banner: "https://yt3.googleusercontent.com/Erl-57vaL3yo6jExCcNe51DG9rJab-OzEOcDMut7T7-FarykLwISaYRTIxAF_lwqgv3CXsQ0WA=w854-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "boominatiworldwide.com",
         linkCount: "4",
         username: "metroboomin",
@@ -314,7 +314,7 @@ const data = [
         videos: 185,
         description:
             "Welcome to the official Apple YouTube channel. Here you’ll find news about product launches, tutorials, and other great content. Apple revolutionized personal technology with the introduction of the Macintosh in 1984. Today Apple continues to be a global leader in innovation with products like iPhone, iPad, Mac, Apple Watch and Apple Vision Pro. Our six software platforms (iOS, iPadOS, macOS, watchOS, tvOS, and visionOS) provide seamless experiences across Apple devices. Breakthrough services include the App Store, Apple Music, Apple Pay, and iCloud. And Apple keeps pursuing innovation with products like HomePod, Apple Fitness+, and Apple Card. Apple’s more than 160,000 employees are dedicated to making the best products on earth, and to leaving the world better than we found it. ",
-        banner: "https://yt3.googleusercontent.com/-Ohr9kv5aYR0Gb871_h-kj4tnMy8AQUeOey_ZNazjApndlU_L11Cb67Bh5vEqRng22lv5UggwA=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+        banner: "https://yt3.googleusercontent.com/zMWCvR0RqnaTqND6miW9KEXEQqldP9AJFhzAjdZDPGcRUJm05Q02jYQYi-OZOjv5eE9RDxnx=w854-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
         link: "apple.com",
         linkCount: 1,
         username: "Apples",
